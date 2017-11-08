@@ -1,0 +1,16 @@
+Package: rcurses
+Version: 1.0.0
+Author: Norm Matloff <normmatloff@gmail.com> [cre,aut], 
+    Matthew Kotila <mrkotila@ucdavis.edu> [aut], Aaron Kaloti
+    <apksingh@ucdavis.edu> [aut]
+Maintainer: Norm Matloff <normmatloff@gmail.com>
+Title: RCurses
+Description: Allows access to the C implementation of the Unix 'curses'
+    library through R.
+Depends: stats,utils
+Suggests: 
+ByteCompile: yes
+NeedsCompilation: yes
+License: GPL (>= 2)
+URL: https://github.com/matloff/rcurses
+BugReports: https://github.com/matloff/rcurses/issues
