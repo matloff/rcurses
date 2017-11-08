@@ -59,6 +59,51 @@ inch <- function() {
     return(.C('rc_inch', result=character(1))$result)
 }
 
+start_color <- function() {
+    .C('rc_start_color')
+    return(NA)
+}
+
+init_pair <- function(pair,f,b) {
+    .C('rc_init_pair',as.integer(pair),as.integer(f),as.integer(b))
+}
+
+bkgd <- function(ch) {
+    .C('rc_bkgd',as.integer(ch))
+}
+
+COLOR_BLACK <- function() {
+    return(.C('rc_COLOR_BLACK',ret=as.integer(0))$ret)
+}
+
+COLOR_RED <- function() {
+    return(.C('rc_COLOR_RED',ret=as.integer(0))$ret)
+}
+
+COLOR_GREEN <- function() {
+    return(.C('rc_COLOR_GREEN',ret=as.integer(0))$ret)
+}
+
+COLOR_YELLOW <- function() {
+    return(.C('rc_COLOR_YELLOW',ret=as.integer(0))$ret)
+}
+
+COLOR_BLUE <- function() {
+    return(.C('rc_COLOR_BLUE',ret=as.integer(0))$ret)
+}
+
+COLOR_MAGENTA <- function() {
+    return(.C('rc_COLOR_MAGENTA',ret=as.integer(0))$ret)
+}
+
+COLOR_CYAN <- function() {
+    return(.C('rc_COLOR_CYAN',ret=as.integer(0))$ret)
+}
+
+COLOR_WHITE <- function() {
+    return(.C('rc_COLOR_WHITE',ret=as.integer(0))$ret)
+}
+
 COLS <- function() {
     return(.C('rc_COLS', result=integer(1))$result)
 }
