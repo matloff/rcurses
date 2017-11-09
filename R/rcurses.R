@@ -43,6 +43,11 @@ mvaddstr <- function(row, column, string) {
     .C('rc_mvaddstr', as.integer(row), as.integer(column), as.character(string))
 }
 
+MAX_STRING_LENGTH = 1024
+getstr <- function() {
+    return(.C('rc_getstr', result=character(MAX_STRING_LENGTH))$result)
+}
+
 refresh <- function() {
     .C('rc_refresh')
 }

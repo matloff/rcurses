@@ -46,7 +46,11 @@ void rc_insch(char** ch) {
 }
 
 void rc_mvaddstr(int* row, int* column, char** str) {
-    mvaddstr(*row, *column, **str);
+    mvaddstr(*row, *column, *str);
+}
+
+void rc_getstr(char** str) {
+    getstr(*str);
 }
 
 void rc_refresh() {
