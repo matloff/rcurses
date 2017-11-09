@@ -19,6 +19,10 @@ nocbreak <- function() {
     .C('rc_nocbreak')
 }
 
+noecho  <- function() {
+    .C('rc_noecho')
+}
+
 echo <- function() {
     .C('rc_echo')
 }
