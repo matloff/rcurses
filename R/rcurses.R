@@ -39,6 +39,19 @@ insch <- function(ch) {
     .C('rc_insch', as.character(ch))
 }
 
+addstr <- function(y=NA,x=NA,str,attr=NA) {
+    if (is.na(y) == FALSE && is.na(x) == FALSE) {
+        move(y,x)
+    }
+    for (ch in substr(str,1:nchar(str),1:nchar(str))) {
+        if (is.na(attr) == FALSE) {
+            ch <- as.character(intToUtf8(bitwOr(utf8ToInt(ch),attr)))
+        }
+        .C('rc_addch',ch)
+    }
+    return(NA)
+}
+
 mvaddstr <- function(row, column, string) {
     .C('rc_mvaddstr', as.integer(row), as.integer(column), as.character(string))
 }

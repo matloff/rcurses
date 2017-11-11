@@ -1,14 +1,14 @@
 Package: rcurses
-Version: 1.0.0
-Author: Norm Matloff <normmatloff@gmail.com> [cre,aut], 
-    Matthew Kotila <mrkotila@ucdavis.edu> [aut], Aaron Kaloti
-    <apksingh@ucdavis.edu> [aut]
-Maintainer: Norm Matloff <normmatloff@gmail.com>
-Title: RCurses
-Description: Allows access to the C implementation of the Unix 'curses'
-    library through R.
-Depends: stats,utils
-Suggests: 
+Title: Access Unix Curses Library From R
+Version: 0.1
+Authors@R: c(person("Norm", "Matloff", email = "normmatloff@gmail.com",
+                    role = c("aut", "cre")),
+             person("Matthew", "Kotila", email = "mrkotila@ucdavis.edu",
+                    role = c("aut")),
+             person("Aaron", "Kaloti", email = "apksingh@ucdavis.edu",
+                    role = c("aut")))
+Description: Provides access to the ncurses implementation of the Unix
+             curses library from R.
 ByteCompile: yes
 NeedsCompilation: yes
 License: GPL (>= 2)
