@@ -74,7 +74,7 @@ delch <- function() {
 }
 
 getch <- function() {
-    return(.C('rc_getch', result=integer(1))$result)
+    return(intToUtf8(.C('rc_getch', result=integer(1))$result))
 }
 
 inch <- function() {
