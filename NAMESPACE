@@ -1,8 +1,6 @@
 
 import(stats,utils)
 
-importFrom("methods", "new")
-
 export(initscr, endwin, cbreak, nocbreak, noecho,
     echo, clear, move,
     addch, insch, mvaddstr, getstr, refresh, delch,
