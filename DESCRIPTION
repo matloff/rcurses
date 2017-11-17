@@ -1,6 +1,6 @@
 Package: rcurses
 Version: 0.1
-Title: Access Unix Curses Library From R
+Title: Access Unix Curses Library from R
 Authors@R: c(person("Norm", "Matloff", email = "normmatloff@gmail.com",
                     role = c("aut", "cre")),
              person("Matthew", "Kotila", email = "mrkotila@ucdavis.edu",
