@@ -10,6 +10,7 @@ Authors@R: c(person("Norm", "Matloff", email = "normmatloff@gmail.com",
 Maintainer: Norm Matloff <normmatloff@gmail.com>
 Description: Provides access to the ncurses implementation of the Unix
              curses library from R.
+Depends: stats,utils
 ByteCompile: yes
 NeedsCompilation: yes
 License: GPL (>= 2)
