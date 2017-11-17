@@ -53,11 +53,10 @@ game <- function() {
     # r, c will be current screen row, column of cursor
     r <<- 0  # top row of screen
     c <<- 0  # leftmost column of screen
-    qcode <- 113  # the character 'q'
 
     while (TRUE) {
         d <- getch()  # read typed character (numeric code)
-        if (d == qcode)  # game over
+        if (d == 'q')  # game over
             break
         draw(d)  # draw the character
     }

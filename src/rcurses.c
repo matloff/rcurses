@@ -1,4 +1,5 @@
 #include <R.h> // required
+#include <R_ext/Rdynload.h>  // defines DllInfo
 
 #include <curses.h>
 #include <stdio.h>
@@ -123,4 +124,9 @@ void rc_LINES(int* ret) {
 
 void rc_A_REVERSE(int* ret) {
     *ret = A_REVERSE;
+}
+
+void R_init_test(DllInfo* info) {
+    R_registerRoutines(info, NULL, NULL, NULL, NULL);
+    R_useDynamicSymbols(info, FALSE);
 }
