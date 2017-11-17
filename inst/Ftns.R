@@ -43,7 +43,7 @@
 
 nbinit <- function() {
    nbenv <<- new.env()
-   nbenv$nblist <- data.frame(f=character(0),status=character(0))
+   nbenv$nblist <- data.frame(f=character(0),status=character(0), stringsAsFactors=FALSE)
 }
 
 nbprint <- function() {
@@ -70,7 +70,7 @@ nobug <- function(fname=NULL) {
       }
    }
    if (!is.null(fname)) {
-      tmp <- data.frame(f=fname,status='a')
+      tmp <- data.frame(f=fname,status='a', stringsAsFactors=FALSE)
       if (fname %in% nblist$f) stop('function already in debugged list')
       cmd <- paste('debug(',fname,')',sep='')
       docmd(cmd)
@@ -92,7 +92,11 @@ nobug <- function(fname=NULL) {
       }
       nbenv$nblist[j,2] <- op
       if (op == 'i') {
-         cmd <- paste('undebug(',fname,')',sep='')
+         cmd <- paste('undebug(',ftnname,')',sep='')
+         docmd(cmd)
+      }
+      if (op == 'a') {
+         cmd <- paste('debug(',ftnname,')', sep='')
          docmd(cmd)
       }
    }
