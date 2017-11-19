@@ -31,6 +31,13 @@ clear <- function() {
     .C('rc_clear')
 }
 
+getyx <- function() {
+    rowNum <- -1; columnNum <- -1
+    tmp <- .C('rc_getyx', as.integer(rowNum), as.integer(columnNum),
+       result = integer(2))
+    tmp$result
+}
+
 move <- function(row, column) {
     .C('rc_move', as.integer(row), as.integer(column))
 }

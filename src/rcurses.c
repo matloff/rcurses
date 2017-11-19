@@ -34,6 +34,11 @@ void rc_clear() {
     clear();
 }
 
+void rc_getyx(int* row, int* column, int *result) {
+    getyx(window,*row, *column);
+    result[0] = *row; result[1] = *column;
+}
+
 void rc_move(int* row, int* column) {
     move(*row, *column);
 }
