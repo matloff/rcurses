@@ -29,17 +29,20 @@ library(rcurses)
 
 # draw the specified character dc
 draw = function(dc) {
-    move(r, c)  # move the cursor to the specified row, col in screen
+    pos <- getyx()
+    rw <- pos[1]
+    cl <- pos[2]
     delch()  # delete the character currently there
     insch(dc)  # insert the new character
-    refresh()  # update the changes on the screen
-    r <<- r + 1  # down one column
-    if (r == nrows) {  # if past bottom, go to top
-        r <<- 0
-        c <<- c + 1
-        if (c == ncols)  # if past right edge, go to left
-            c <<- 0
+    rw <- rw + 1  # down one column
+    if (rw == nrows) {  # if past bottom, go to top
+        rw <- 0
+        cl <- cl + 1
+        if (cl == ncols)  # if past right edge, go to left
+            cl <- 0
     }
+    move(rw, cl)  # move the cursor to the specified row, col in screen
+    refresh()  # update the changes on the screen
 }
 
 game <- function() {
@@ -50,9 +53,6 @@ game <- function() {
     ncols <<- COLS()  # number of column in the screen
     clear()  # set the screen to all blanks
     refresh()  # render the changes
-    # r, c will be current screen row, column of cursor
-    r <<- 0  # top row of screen
-    c <<- 0  # leftmost column of screen
 
     while (TRUE) {
         d <- getch()  # read typed character (numeric code)
@@ -66,5 +66,6 @@ game <- function() {
     nocbreak()
     endwin()  # exit curses app
 }
+
 ```
 
