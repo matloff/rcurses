@@ -41,27 +41,23 @@
 # Whenever nobug() is called, debug() is called on all active functions in
 # the debugged list, in case they have changed.
 
+library(rcurses)
+
 nbinit <- function() {
    nbenv <<- new.env()
-   nbenv$nblist <- data.frame(f=character(0),status=character(0))
-}
-
-nbprint <- function() {
-   if (nrow(nbenv$nblist) == 0) {
-      print('nblist empty')
-      return()
-   }
-   print(nbenv$nblist)
+   nbenv$nblist <- data.frame(f=character(0),status=character(0), stringsAsFactors=FALSE)
 }
 
 nobug <- function(fname=NULL) {
    nblist <- nbenv$nblist
+
    if (nrow(nblist) == 0 && is.null(fname)) {
       print('nblist empty')
       return()
    }
+
+   # refresh debug status for active functions
    if (nrow(nblist) > 0) {
-      # refresh debug status for active functions
       for (i in 1:nrow(nblist)) {
          if (nblist[i,2] == 'a') {
             cmd <- paste('debug(',nblist[i,1],')',sep='')
@@ -69,33 +65,64 @@ nobug <- function(fname=NULL) {
          }
       }
    }
+
+   # add the given function name to the list, mark it for debugging
    if (!is.null(fname)) {
-      tmp <- data.frame(f=fname,status='a')
+      tmp <- data.frame(f=fname,status='a', stringsAsFactors=FALSE)
       if (fname %in% nblist$f) stop('function already in debugged list')
       cmd <- paste('debug(',fname,')',sep='')
       docmd(cmd)
       nblist <- rbind(nblist,tmp)
       nbenv$nblist <<- nblist
    }
-   while(TRUE) {
-      nbprint()
-      print("ops are 'a', 'i' or 'rm', e.g. 'g rm' to remove ftn g") 
-      cmd <- readline('enter either ftn number and op, or q: ')
-      if (cmd == 'q') return()
+
+   initscr()
+   cbreak()
+
+   while (TRUE) {
+      clear()
+      refresh()
+
+      # print the debugged list
+      currRowIndex = 0
+      if (nrow(nbenv$nblist) == 0) {
+         mvaddstr(currRowIndex, 0, 'nblist empty')
+         break
+      }
+      debuggedList = capture.output(nbenv$nblist)
+      for (row in debuggedList) {
+         mvaddstr(currRowIndex, 0, row)
+         currRowIndex = currRowIndex + 1
+      }
+
+      # get user input
+      mvaddstr(currRowIndex, 0, "ops are 'a', 'i' or 'rm', e.g. 'g rm' to remove ftn g")
+      mvaddstr(currRowIndex + 1, 0, 'enter either ftn number and op, or q: ')
+      cmd <- getstr()
+      if (cmd == 'q') break
       tmp <- strsplit(cmd,' ')[[1]]
       ftnname <- tmp[1]
       op <- tmp[2]
       j <- which(nblist[,1] == ftnname)
       if (op == 'rm') {
          nbenv$nblist <<- nblist[-j,]
-         return()
+         break
       }
       nbenv$nblist[j,2] <- op
       if (op == 'i') {
-         cmd <- paste('undebug(',fname,')',sep='')
+         cmd <- paste('undebug(',ftnname,')',sep='')
+         docmd(cmd)
+      }
+      if (op == 'a') {
+         cmd <- paste('debug(',ftnname,')', sep='')
          docmd(cmd)
       }
    }
+
+   nocbreak()
+   endwin()
+
+   return()
 }
 
 docmd <- function(toexec) eval(parse(text=toexec))

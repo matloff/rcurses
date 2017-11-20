@@ -3,7 +3,7 @@ import(stats,utils)
 
 export(initscr, endwin, cbreak, nocbreak, noecho,
     echo, clear, move, getyx,
-    addch, insch, mvaddstr, getstr, refresh, delch,
+    addch, insch, addstr, mvaddstr, getstr, refresh, delch,
     getch, inch, start_color, init_pair, bkgd,
     COLOR_BLACK, COLOR_RED, COLOR_GREEN, COLOR_YELLOW,
     COLOR_BLUE, COLOR_MAGENTA, COLOR_CYAN, COLOR_WHITE,

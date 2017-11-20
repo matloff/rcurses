@@ -1,8 +1,6 @@
 # Avoid harding file path or file extension.
 dyn.load(system.file(paste0("libs/rcurses", .Platform$dynlib.ext), package="rcurses"))
 
-# get stuff from both dropbox folders, once have convention
-
 initscr <- function() {
     .C('rc_initscr')
 }
@@ -67,9 +65,8 @@ mvaddstr <- function(row, column, string) {
     .C('rc_mvaddstr', as.integer(row), as.integer(column), as.character(string))
 }
 
-MAX_STRING_LENGTH = 1024
 getstr <- function() {
-    return(.C('rc_getstr', result=character(MAX_STRING_LENGTH))$result)
+    return(.C('rc_getstr', result=character(1))$result)
 }
 
 refresh <- function() {
