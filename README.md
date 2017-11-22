@@ -15,21 +15,23 @@ building an advanced R debugging tool, we have developed our package,
 **rcurses**, to do the same for R.  (Not all of the **curses** library is
 implemented; let us know if you have requests.)
 
-Below is a simple toy example.  The comments should explain all.
+Some illustrations of the use of the package are presented below.  The
+first is a simple toy example, a very rudimentary game.  One keeps
+typing keys, which appear on the screen, downward within a column.  When
+the bottom of a column is reach, the cursor goes to the top of the next
+column, wrapping around when the rightmost column is reached.  Here is a
+screenshot:
+
+<img src="vignettes/GamePic.png" alt="n1" width="500"/>
+
+The code follows, in which the comments should explain all:
 
 ```R
-# translation of the C curses example found in section 3.1 of 
-# http://heather.cs.ucdavis.edu/~matloff/UnixAndC/CLanguage/Curses.pdf
-
-# simple curses example; keeps drawing the inputted characters, in columns
-# downward, shifting rightward when the last row is reached, and
-# wrapping around when the rightmost column is reached
-
 library(rcurses)
 
 # draw the specified character dc
 draw = function(dc) {
-    pos <- getyx()
+    pos <- getyx()  # get current row, column of the cursor
     rw <- pos[1]
     cl <- pos[2]
     delch()  # delete the character currently there
@@ -55,7 +57,7 @@ game <- function() {
     refresh()  # render the changes
 
     while (TRUE) {
-        d <- getch()  # read typed character (numeric code)
+        d <- getch()  # read typed character 
         if (d == 'q')  # game over
             break
         draw(d)  # draw the character
@@ -66,6 +68,44 @@ game <- function() {
     nocbreak()
     endwin()  # exit curses app
 }
-
 ```
+
+Next, something still extremely simple but actually useful.  If one does
+one's debugging using the basic built-in R functions, e.g. **debug()**
+and **browser()**, it may be difficult to remember which functions one
+currently has in debug status.  So it would be nice to have a tool to
+keep track of them.  In addition, it would be useful to temporarily
+remove a function from debug status and then easily reinstate it.  The
+functions below are aimed in that direction.  We call the package
+**nobug**.
+
+Consider for instance the **partools** package, which consists of over
+60 user-accessible functions.  Say we are debugging a **partools** app
+(or **partools** itself).
+We would first initialize,
+
+```R
+> nbinit()
+```
+
+Now do the equivalent of calling **debug()** on several functions:a
+
+```R
+> nobug(c('filegetrows','getnumdigs','fileagg'))
+```
+The screen then looks like this:
+
+<img src="vignettes/Nobug.png" alt="n1" width="500"/>
+
+We have temporarily left the R console, and the current window shows a
+list of the functions being debugged.  We hit 'q' to return to the R
+console, with the screen now being
+
+Later, say we want to temporarily put the function **getnumdigs()** on
+inactive status.  We could call **nobug()** with no arguments, and give
+a command to set the function to inactive.  The screen would now look
+like this:
+
+<img src="vignettes/Nobug1.png" alt="n1" width="500"/>
+
 

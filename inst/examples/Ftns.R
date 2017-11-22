@@ -1,4 +1,6 @@
 
+# 'nobug' package
+
 # code to keep track of which functions are currently being debugged,
 # meaning that debug() has been called on them; a function can be
 # temporarily removed from debug status, then later added; calling the
@@ -12,16 +14,11 @@
 #    initializes the debugged list as a data frame nblist in a 
 #    global environment nbenv
 # 
-# nobug(fname):
+# nobug(fnames=NULL):
 # 
-#    debug() is called on the function, specified as a quoted string, and
-#    is added to the debugged list 
-# 
-# nobug(fname=NULL):
-
-#    if fname, specified as a quoted string, is not NULL, then debug()
-#    is invoked on the function, and the function is added to the
-#    debugged list
+#    if fnames, specified as a character vector, is not NULL, then 
+#    debug() is invoked on the function, and the functions are added 
+#    to the debugged list
 
 #    display all functions and their debug status
 # 
@@ -45,17 +42,16 @@ library(rcurses)
 
 nbinit <- function() {
    nbenv <<- new.env()
-   nbenv$nblist <- data.frame(f=character(0),status=character(0), stringsAsFactors=FALSE)
+   nbenv$nblist <<- 
+      data.frame(f=character(0),status=character(0), stringsAsFactors=FALSE)
 }
 
-nobug <- function(fname=NULL) {
+nobug <- function(fnames=NULL) {
    nblist <- nbenv$nblist
-
-   if (nrow(nblist) == 0 && is.null(fname)) {
+   if (nrow(nblist) == 0 && is.null(fnames)) {
       print('nblist empty')
       return()
    }
-
    # refresh debug status for active functions
    if (nrow(nblist) > 0) {
       for (i in 1:nrow(nblist)) {
@@ -65,24 +61,22 @@ nobug <- function(fname=NULL) {
          }
       }
    }
-
-   # add the given function name to the list, mark it for debugging
-   if (!is.null(fname)) {
-      tmp <- data.frame(f=fname,status='a', stringsAsFactors=FALSE)
-      if (fname %in% nblist$f) stop('function already in debugged list')
-      cmd <- paste('debug(',fname,')',sep='')
-      docmd(cmd)
-      nblist <- rbind(nblist,tmp)
+   # add the given function names to the list, mark them for debugging
+   if (!is.null(fnames)) {
+      for (fname in fnames) {
+         if (fname %in% nblist$f) stop('function already in debugged list')
+         tmp <- data.frame(f=fname,status='a', stringsAsFactors=FALSE)
+         cmd <- paste('debug(',fname,')',sep='')
+         docmd(cmd)
+         nblist <- rbind(nblist,tmp)
+      }
       nbenv$nblist <<- nblist
    }
-
    initscr()
    cbreak()
-
    while (TRUE) {
       clear()
       refresh()
-
       # print the debugged list
       currRowIndex = 0
       if (nrow(nbenv$nblist) == 0) {
@@ -96,14 +90,18 @@ nobug <- function(fname=NULL) {
       }
 
       # get user input
-      mvaddstr(currRowIndex, 0, "ops are 'a', 'i' or 'rm', e.g. 'g rm' to remove ftn g")
+      mvaddstr(currRowIndex, 0, 
+         "ops are 'a', 'i' or 'rm', e.g. 'g rm' to remove ftn g")
       mvaddstr(currRowIndex + 1, 0, 'enter either ftn number and op, or q: ')
       cmd <- getstr()
       if (cmd == 'q') break
       tmp <- strsplit(cmd,' ')[[1]]
-      ftnname <- tmp[1]
       op <- tmp[2]
-      j <- which(nblist[,1] == ftnname)
+      # which function?
+      ftnnum <- as.numeric(tmp[1])
+      ## j <- which(nblist[,1] == ftnname)
+      j <- which(rownames(nblist) == ftnnum)
+      ftnname <- nblist[j,1]
       if (op == 'rm') {
          nbenv$nblist <<- nblist[-j,]
          break
