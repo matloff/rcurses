@@ -6,6 +6,8 @@ Authors@R: c(person("Norm", "Matloff", email = "normmatloff@gmail.com",
              person("Matthew", "Kotila", email = "mrkotila@ucdavis.edu",
                     role = c("aut")),
              person("Aaron", "Kaloti", email = "apksingh@ucdavis.edu",
+                    role = c("aut")),
+             person("Vincent", "Yang", email = "vinyang@ucdavis.edu",
                     role = c("aut")))
 Maintainer: Norm Matloff <normmatloff@gmail.com>
 Description: Provides access to the ncurses implementation of the Unix
