@@ -48,17 +48,29 @@ insch <- function(ch) {
     .C('rc_insch', as.character(ch))
 }
 
-addstr <- function(y=NA,x=NA,str,attr=NA) {
+addstr <- function(str, y=NA, x=NA, attr=NA) {
+    # If only str was given, then this is just basic addstr.
+    if (is.na(y) && is.na(x) && is.na(attr)) {
+        .C('rc_addstr', as.character(str))
+        return()
+    }
+
+    # If position was given, move cursor to it.
     if (is.na(y) == FALSE && is.na(x) == FALSE) {
+        if (is.na(attr)) {  # If no attribute, then this is just mvaddstr().
+            mvaddstr(y, x, str)
+            return()
+        }
         move(y,x)
     }
+
     for (ch in substr(str,1:nchar(str),1:nchar(str))) {
         if (is.na(attr) == FALSE) {
             ch <- as.character(intToUtf8(bitwOr(utf8ToInt(ch),attr)))
         }
         .C('rc_addch',ch)
     }
-    return(NA)
+    return()
 }
 
 mvaddstr <- function(row, column, string) {
