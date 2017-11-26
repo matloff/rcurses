@@ -51,6 +51,10 @@ void rc_insch(char** ch) {
     insch(**ch);
 }
 
+void rc_addstr(char** str) {
+    addstr(*str);
+}
+
 void rc_mvaddstr(int* row, int* column, char** str) {
     mvaddstr(*row, *column, *str);
 }
