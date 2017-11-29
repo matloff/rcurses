@@ -1,6 +1,7 @@
 # 'lsv' package
 
 # call testLsv() for a sample run with example variables.
+# due to the use of strrep(), at least R 3.3.0 is required to run this example.
 
 library(rcurses)
 
