@@ -7,7 +7,7 @@ library(rcurses)
 
 ######################### lsv() and a test function #########################
 
-# Displays all non-functions listed by ls() in a tabular format with three
+# Displays all objects listed by ls() in a tabular format with three
 # columns: name, class, and notes.
 lsv <- function() {
     initscr()
@@ -76,24 +76,22 @@ displayObjects <- function() {
     for (objName in objNames) {
         obj = get(objName)
         objClass = class(obj)
-        if (objClass != "function") {  # don't print function names
-            objNote = determineObjNote(obj, objClass)
+        objNote = determineObjNote(obj, objClass)
 
-            # Make the row to print for this object.
-            namesToPrint = c(namesToPrint, objName)
-            classesToPrint = c(classesToPrint, objClass)
-            notesToPrint = c(notesToPrint, objNote)
+        # Make the row to print for this object.
+        namesToPrint = c(namesToPrint, objName)
+        classesToPrint = c(classesToPrint, objClass)
+        notesToPrint = c(notesToPrint, objNote)
 
-            # Update info on max label sizes.
-            maxObjNameLength = max(maxObjNameLength, nchar(objName))
-            maxClassNameLength = max(maxClassNameLength, nchar(objClass))
-        }
+        # Update info on max label sizes.
+        maxObjNameLength = max(maxObjNameLength, nchar(objName))
+        maxClassNameLength = max(maxClassNameLength, nchar(objClass))
     }
 
-    # If we didn't find any non-functions, stop now. Or the for loop will cause crash.
-    if (length(namesToPrint) == 0) {
-        return()
-    }
+    # # If we didn't find any non-functions, stop now. Or the for loop will cause crash.
+    # if (length(namesToPrint) == 0) {
+    #     return()
+    # }
 
     # Compute widths of first two columns. Third column's width doesn't matter.
     SPACES_BETWEEN_COLS = 1
