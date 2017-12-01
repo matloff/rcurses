@@ -7,8 +7,8 @@ library(rcurses)
 
 ######################### lsv() and a test function #########################
 
-# Displays all objects listed by ls() in a tabular format with three
-# columns: name, class, and notes.
+# Displays all objects listed by ls() in a tabular format with two
+# columns: name, class.
 lsv <- function() {
     initscr()
     cbreak()
@@ -34,24 +34,6 @@ testLsv <- function() {
 
 ######################### helper functions ##################################
 
-determineObjNote <- function(obj, objClass) {
-    defaultObjNote = ""
-
-    if (objClass == "numeric") {
-        if (length(obj) > 1) {  # if object is vector
-            return(paste("length: ", as.character(length(obj)), sep=""))
-        }
-    } else if (objClass == "list") {
-        listNames = paste(names(obj), collapse=' ')
-        return(paste("list names: ", listNames, sep=""))
-    } else if (objClass == "data.frame") {
-        colNames = paste(names(obj), collapse=' ')
-        return(paste("col names: ", colNames, sep=""))
-    }
-
-    return(defaultObjNote)
-}
-
 # Assumes nchar(string) <= desiredStringLength.
 # e.g. padStringWithTrailingSpaces("hello", 8) returns "hello   "
 padStringWithTrailingSpaces <- function(string, desiredStringLength) {
@@ -63,7 +45,6 @@ padStringWithTrailingSpaces <- function(string, desiredStringLength) {
 displayObjects <- function() {
     namesToPrint = character(0)
     classesToPrint = character(0)
-    notesToPrint = character(0)
 
     # Has name of each object in user's environment
     objNames = ls(".GlobalEnv")
@@ -72,36 +53,25 @@ displayObjects <- function() {
     # Keep track of the max lengths of the object names/classes, so
     # the table can be as small as possible without losing info.
     maxObjNameLength <- nchar("name")
-    maxClassNameLength <- nchar("class")
     for (objName in objNames) {
         obj = get(objName)
         objClass = class(obj)
-        objNote = determineObjNote(obj, objClass)
 
         # Make the row to print for this object.
         namesToPrint = c(namesToPrint, objName)
         classesToPrint = c(classesToPrint, objClass)
-        notesToPrint = c(notesToPrint, objNote)
 
         # Update info on max label sizes.
         maxObjNameLength = max(maxObjNameLength, nchar(objName))
-        maxClassNameLength = max(maxClassNameLength, nchar(objClass))
     }
-
-    # # If we didn't find any non-functions, stop now. Or the for loop will cause crash.
-    # if (length(namesToPrint) == 0) {
-    #     return()
-    # }
 
     # Compute widths of first two columns. Third column's width doesn't matter.
     SPACES_BETWEEN_COLS = 1
     nameColWidth = maxObjNameLength + SPACES_BETWEEN_COLS
-    classColWidth = maxClassNameLength + SPACES_BETWEEN_COLS
 
     # Make table labels.
     nameLabel = padStringWithTrailingSpaces("name", nameColWidth)
-    classLabel = padStringWithTrailingSpaces("class", classColWidth)
-    labelsRow = paste(nameLabel, classLabel, "notes", sep="")
+    labelsRow = paste(nameLabel, "class", sep="")
 
     # Display the table rows using rcurses.
     clear()
@@ -114,12 +84,11 @@ displayObjects <- function() {
     currRowIndex = currRowIndex + 1
     # Display the variable rows.
     for (index in 1:length(namesToPrint)) {
-        # For this object, display name, class, and note (if any),
+        # For this object, display name and class,
         # padding with correct amount of trailing spaces so the table looks nice.
         mvaddstr(currRowIndex, 0,
             padStringWithTrailingSpaces(namesToPrint[index], nameColWidth))
-        addstr(padStringWithTrailingSpaces(classesToPrint[index], classColWidth))
-        addstr(notesToPrint[index])
+        addstr(classesToPrint[index])
 
         currRowIndex = currRowIndex + 1
     }
