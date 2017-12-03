@@ -1,5 +1,7 @@
 library(rcurses)
 
+pids <<- list()
+
 start <- function() {
     initscr()  # initialize curses window
     cbreak()  # typed characters submitted immediately, no wait for Enter
@@ -21,10 +23,30 @@ draw = function(dc) {
     }
 }
 
+delline <- function() {
+    move(r, d)
+    for (i in 1:ncols) {
+        delch()
+        d <<- d + 1
+    }
+    d <<- 0
+    move(r, 0)
+    refresh()
+}
+
 runcmd <- function() {
     res = system('ps ax', intern=TRUE)
     # Res is an array where each line is a result of ps ax
     return(res)
+}
+
+rerun <- function() {
+    nrows <<- LINES()  # number of rows in the screen
+    ncols <<- COLS()  # number of column in the screen
+    clear()  # set the screen to all blanks
+    psax()
+    d <<- 0
+    refresh()
 }
 
 restore <- function() {
@@ -40,13 +62,17 @@ psax <- function() {
     d <<- 0  # leftmost column of screen
 
     # Draw the result of ps ax onto the screen
-    for (count in (length(res)-nrows):length(res)+1) {
+    for (count in (length(res)-nrows+1):length(res)) {
         d <<- 0
         r <<- r + 1
         line = res[count]
         line_split = strsplit(line, "")[[1]]
 
         col = 0
+
+        # Save the pid of each row
+        pids[r] <<- strsplit(trimws(line), " ")[[1]][1]
+
         for (c in line_split) {
             draw(c)
             col = col + 1
@@ -56,7 +82,6 @@ psax <- function() {
             }
         }
     }
-    # why is d getting cleared?
 }
 
 game <- function() {
@@ -64,34 +89,45 @@ game <- function() {
     nrows <<- LINES()  # number of rows in the screen
     ncols <<- COLS()  # number of column in the screen
     clear()  # set the screen to all blanks
-    refresh()  # render the changes
     # r, c will be current screen row, column of cursor
     psax()
 
-    print(r)
-    print(d)
-    r <<- r - 1
-    d <<- d - 1
+    d <<- 0
+    refresh()
+
     while (TRUE) {
         ch <- getch()  # read typed character (numeric code)
-        #print(d)
-        if (ch == 'k') {
+
+        # move up
+        if (ch == 'u') {
             r <<- r - 1
             if (r < 0) 
                 r <<- 0
             move(r, d)
         }
-        else if (ch == 'j') {
+
+        # move down
+        else if (ch == 'd') {
             r <<- r + 1
             if (r > nrows) {
                 r <<- nrows
             }
             move(r, d)
         }
+
+        # kill a process
+        else if (ch == 'k') {
+            pid = pids[r]
+            res = system(paste("kill ", pid), intern=FALSE)
+            delline()
+        }
+        else if (ch == 'r') {
+            rerun()
+        }
             
-        if (ch == 'q')  # game over
+        # end psax
+        else if (ch == 'q') 
             break
-        #draw(ch)  # draw the character
     }
 
     # now restore normal screen status
