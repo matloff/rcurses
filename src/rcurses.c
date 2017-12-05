@@ -368,8 +368,11 @@ SEXP rc_echochar() {
 }
 
 SEXP rc_endwin() {
-    // TODO: implement this
-    return R_NilValue;
+    SEXP result;
+    PROTECT(result = NEW_INTEGER(1));
+    INTEGER(result)[0] = endwin();
+    UNPROTECT(1);
+    return result;
 }
 
 SEXP rc_erase() {

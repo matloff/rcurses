@@ -83,7 +83,6 @@ echo <- function() {
 
 endwin <- function() {
     w(match.call()[[1]])
-    # TODO: implement this
     return(.Call('rc_endwin'))
 }
 
