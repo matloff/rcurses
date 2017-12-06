@@ -711,7 +711,7 @@ getstr <- function(window,n=NULL,y=NULL,x=NULL) {
     if (is.double(n)) { n <- as.integer(n) }
     if (is.double(y)) { y <- as.integer(y) }
     if (is.double(x)) { x <- as.integer(x) }
-    str <- as.raw(rep(0,1023))
+    str <- as.raw(rep(0,1024))
     if (is.integer(y) && is.integer(x)) {
         if (is.integer(n)) { .Call('rc_mvwgetnstr',window,y,x,str,n) }
         else { .Call('rc_mvwgetstr',window,y,x,str) }
