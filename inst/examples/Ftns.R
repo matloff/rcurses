@@ -1,4 +1,3 @@
-
 # 'nobug' package
 
 # code to keep track of which functions are currently being debugged,
@@ -10,25 +9,25 @@
 # call forms:
 
 # nbinit():
-# 
-#    initializes the debugged list as a data frame nblist in a 
+#
+#    initializes the debugged list as a data frame nblist in a
 #    global environment nbenv
-# 
+#
 # nobug(fnames=NULL):
-# 
-#    if fnames, specified as a character vector, is not NULL, then 
-#    debug() is invoked on the function, and the functions are added 
+#
+#    if fnames, specified as a character vector, is not NULL, then
+#    debug() is invoked on the function, and the functions are added
 #    to the debugged list
 
 #    display all functions and their debug status
-# 
+#
 #    user is then asked to give a command:
-# 
+#
 #       j rm:  remove function on line j from the debugged list
 #       j i:  undebug function j, but keep it in the debugged list
 #       j a:  reactivate function j's debug mode
 #       q:  exit this display of the debugged list
-# 
+#
 #       the user is repeatedly asked for input until he/she hits q
 
 # The debugged list is a 2-column data frame, with the function name in
@@ -42,8 +41,9 @@ library(rcurses)
 
 nbinit <- function() {
    nbenv <<- new.env()
-   nbenv$nblist <<- 
-      data.frame(f=character(0),status=character(0), stringsAsFactors=FALSE)
+   nbenv$nblist <<-
+      data.frame(f=character(0),status=character(0),stringsAsFactors=FALSE)
+   return(NULL)
 }
 
 nobug <- function(fnames=NULL) {
@@ -65,37 +65,39 @@ nobug <- function(fnames=NULL) {
    if (!is.null(fnames)) {
       for (fname in fnames) {
          if (fname %in% nblist$f) stop('function already in debugged list')
-         tmp <- data.frame(f=fname,status='a', stringsAsFactors=FALSE)
+         tmp <- data.frame(f=fname,status='a',stringsAsFactors=FALSE)
          cmd <- paste('debug(',fname,')',sep='')
          docmd(cmd)
          nblist <- rbind(nblist,tmp)
       }
       nbenv$nblist <<- nblist
    }
-   initscr()
-   cbreak()
+   win <- rcurses.initscr()
+   rcurses.cbreak()
    while (TRUE) {
-      clear()
-      refresh()
+      rcurses.clear(win)
+      rcurses.refresh(win)
       # print the debugged list
-      currRowIndex = 0
+      currRowIndex <- 0
       if (nrow(nbenv$nblist) == 0) {
-         mvaddstr(currRowIndex, 0, 'nblist empty')
+         rcurses.addstr(win,'nblist empty',currRowIndex,0,)
          break
       }
-      debuggedList = capture.output(nbenv$nblist)
+      debuggedList <- capture.output(nbenv$nblist)
       for (row in debuggedList) {
-         mvaddstr(currRowIndex, 0, row)
-         currRowIndex = currRowIndex + 1
+         rcurses.addstr(win,row,currRowIndex,0)
+         currRowIndex <- currRowIndex + 1
       }
 
       # get user input
-      mvaddstr(currRowIndex, 0, 
-         "ops are 'a', 'i' or 'rm', e.g. 'g rm' to remove ftn g")
-      mvaddstr(currRowIndex + 1, 0, 'enter either ftn number and op, or q: ')
-      cmd <- getstr()
+      promptA <- 'ops are \'a\', \'i\' or \'rm\', e.g. \'g rm\' to remove ftn g'
+      promptB <- 'enter either ftn number and op, or q: '
+      rcurses.addstr(win,promptA,currRowIndex,0)
+      rcurses.addstr(win,promptB,currRowIndex + 1,0)
+      cmd <- rcurses.getstr(win)
       if (cmd == 'q') break
       tmp <- strsplit(cmd,' ')[[1]]
+      if (length(tmp) < 2) { next }
       op <- tmp[2]
       # which function?
       ftnnum <- as.numeric(tmp[1])
@@ -112,31 +114,42 @@ nobug <- function(fnames=NULL) {
          docmd(cmd)
       }
       if (op == 'a') {
-         cmd <- paste('debug(',ftnname,')', sep='')
+         cmd <- paste('debug(',ftnname,')',sep='')
          docmd(cmd)
       }
    }
 
-   nocbreak()
-   endwin()
-
-   return()
+   rcurses.nocbreak()
+   rcurses.endwin()
+   return(NULL)
 }
 
-docmd <- function(toexec) eval(parse(text=toexec))
+docmd <- function(toexec) {
+   eval(parse(text=toexec))
+   return(NULL)
+}
 
 ######################### for testing ##################################
 
-test <- function(x) {
-   f(x)
+funcA <- function(x) {
+   newX <- x * 2
+   return(newX)
 }
 
-f <- function(x) {
-   x <- x + 1
-   g(x^2)
+funcB <- function(x) {
+   newX <- x + 1
+   return(newX)
 }
 
-g <- function(y) {
-   y <- y - 2
-   y^3
+funcC <- function(x) {
+   newX <- (x - 1) ^ 3
+   return(newX)
 }
+
+testFtns <- function() {
+   nbinit()
+   nobug(c('funcA','funcB','funcC'))
+   return(NULL)
+}
+
+testFtns()

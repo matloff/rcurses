@@ -73,12 +73,9 @@ SEXP rc_add_wchstr() {
     return R_NilValue;
 }
 
-SEXP rc_addch(SEXP ch) {
-    SEXP result;
-    PROTECT(result = NEW_INTEGER(1));
-    INTEGER(result)[0] = addch((const chtype)INTEGER(ch)[0]);
-    UNPROTECT(1);
-    return result;
+SEXP rc_addch() {
+    // TODO: implement this
+    return R_NilValue;
 }
 
 SEXP rc_addchnstr() {
@@ -86,20 +83,14 @@ SEXP rc_addchnstr() {
     return R_NilValue;
 }
 
-SEXP rc_addchstr(SEXP str) {
-    SEXP result;
-    PROTECT(result = NEW_INTEGER(1));
-    INTEGER(result)[0] = addchstr((const chtype *)INTEGER(str));
-    UNPROTECT(1);
-    return result;
+SEXP rc_addchstr() {
+    // TODO: implement this
+    return R_NilValue;
 }
 
-SEXP rc_addnstr(SEXP str, SEXP n) {
-    SEXP result;
-    PROTECT(result = NEW_INTEGER(1));
-    INTEGER(result)[0] = addnstr((const char *)CHAR(STRING_ELT(str, 0)), (int)INTEGER(n)[0]);
-    UNPROTECT(1);
-    return result;
+SEXP rc_addnstr() {
+    // TODO: implement this
+    return R_NilValue;
 }
 
 SEXP rc_addnwstr() {
@@ -108,11 +99,8 @@ SEXP rc_addnwstr() {
 }
 
 SEXP rc_addstr(SEXP str) {
-    SEXP result;
-    PROTECT(result = NEW_INTEGER(1));
-    INTEGER(result)[0] = addstr((const char *)CHAR(STRING_ELT(str, 0)));
-    UNPROTECT(1);
-    return result;
+    // TODO: implement this
+    return R_NilValue;
 }
 
 SEXP rc_addwstr() {
@@ -237,11 +225,8 @@ SEXP rc_chgat() {
 }
 
 SEXP rc_clear() {
-    SEXP result;
-    PROTECT(result = NEW_INTEGER(1));
-    INTEGER(result)[0] = clear();
-    UNPROTECT(1);
-    return result;
+    // TODO: implement this
+    return R_NilValue;
 }
 
 SEXP rc_clearok() {
@@ -353,8 +338,11 @@ SEXP rc_dupwin() {
 }
 
 SEXP rc_echo() {
-    // TODO: implement this
-    return R_NilValue;
+    SEXP result;
+    PROTECT(result = NEW_INTEGER(1));
+    INTEGER(result)[0] = echo();
+    UNPROTECT(1);
+    return result;
 }
 
 SEXP rc_echo_wchar() {
@@ -500,9 +488,12 @@ SEXP rc_getmaxy() {
     return R_NilValue;
 }
 
-SEXP rc_getmaxyx() {
-    // TODO: implement this
-    return R_NilValue;
+SEXP rc_getmaxyx(SEXP win, SEXP y, SEXP x) {
+    SEXP result;
+    PROTECT(result = NEW_INTEGER(2));
+    getmaxyx((WINDOW *)R_ExternalPtrAddr(win), INTEGER(result)[0], INTEGER(result)[1]);
+    UNPROTECT(1);
+    return result;
 }
 
 SEXP rc_getmouse() {
@@ -515,12 +506,9 @@ SEXP rc_getn_wstr() {
     return R_NilValue;
 }
 
-SEXP rc_getnstr(SEXP str, SEXP n) {
-    SEXP result;
-    PROTECT(result = NEW_INTEGER(1));
-    INTEGER(result)[0] = getnstr((char *)RAW(str), (int)INTEGER(n)[0]);
-    UNPROTECT(1);
-    return result;
+SEXP rc_getnstr() {
+    // TODO: implement this
+    return R_NilValue;
 }
 
 SEXP rc_getparx() {
@@ -538,12 +526,9 @@ SEXP rc_getparyx() {
     return R_NilValue;
 }
 
-SEXP rc_getstr(SEXP str) {
-    SEXP result;
-    PROTECT(result = NEW_INTEGER(1));
-    INTEGER(result)[0] = getstr((char *)RAW(str));
-    UNPROTECT(1);
-    return result;
+SEXP rc_getstr() {
+    // TODO: implement this
+    return R_NilValue;
 }
 
 SEXP rc_getsyx() {
@@ -556,9 +541,12 @@ SEXP rc_getwin() {
     return R_NilValue;
 }
 
-SEXP rc_getyx() {
-    // TODO: implement this
-    return R_NilValue;
+SEXP rc_getyx(SEXP win, SEXP y, SEXP x) {
+    SEXP result;
+    PROTECT(result = NEW_INTEGER(2));
+    getyx((WINDOW *)R_ExternalPtrAddr(win), INTEGER(result)[0], INTEGER(result)[1]);
+    UNPROTECT(1);
+    return result;
 }
 
 SEXP rc_halfdelay() {
@@ -888,12 +876,9 @@ SEXP rc_mousemask() {
     return R_NilValue;
 }
 
-SEXP rc_move(SEXP y, SEXP x) {
-    SEXP result;
-    PROTECT(result = NEW_INTEGER(1));
-    INTEGER(result)[0] = move((int)INTEGER(y)[0], (int)INTEGER(x)[0]);
-    UNPROTECT(1);
-    return result;
+SEXP rc_move() {
+    // TODO: implement this
+    return R_NilValue;
 }
 
 SEXP rc_mvadd_wch() {
@@ -911,12 +896,9 @@ SEXP rc_mvadd_wchstr() {
     return R_NilValue;
 }
 
-SEXP rc_mvaddch(SEXP y, SEXP x, SEXP ch) {
-    SEXP result;
-    PROTECT(result = NEW_INTEGER(1));
-    INTEGER(result)[0] = mvaddch((int)INTEGER(y)[0], (int)INTEGER(x)[0], (const chtype)INTEGER(ch)[0]);
-    UNPROTECT(1);
-    return result;
+SEXP rc_mvaddch() {
+    // TODO: implement this
+    return R_NilValue;
 }
 
 SEXP rc_mvaddchnstr() {
@@ -924,20 +906,14 @@ SEXP rc_mvaddchnstr() {
     return R_NilValue;
 }
 
-SEXP rc_mvaddchstr(SEXP y, SEXP x, SEXP str) {
-    SEXP result;
-    PROTECT(result = NEW_INTEGER(1));
-    INTEGER(result)[0] = mvaddchstr((int)INTEGER(y)[0], (int)INTEGER(x)[0], (const chtype *)INTEGER(str));
-    UNPROTECT(1);
-    return result;
+SEXP rc_mvaddchstr() {
+    // TODO: implement this
+    return R_NilValue;
 }
 
-SEXP rc_mvaddnstr(SEXP y, SEXP x, SEXP str, SEXP n) {
-    SEXP result;
-    PROTECT(result = NEW_INTEGER(1));
-    INTEGER(result)[0] = mvaddnstr((int)INTEGER(y)[0], (int)INTEGER(x)[0], (const char *)CHAR(STRING_ELT(str, 0)), (int)INTEGER(n)[0]);
-    UNPROTECT(1);
-    return result;
+SEXP rc_mvaddnstr() {
+    // TODO: implement this
+    return R_NilValue;
 }
 
 SEXP rc_mvaddnwstr() {
@@ -945,12 +921,9 @@ SEXP rc_mvaddnwstr() {
     return R_NilValue;
 }
 
-SEXP rc_mvaddstr(SEXP y, SEXP x, SEXP str) {
-    SEXP result;
-    PROTECT(result = NEW_INTEGER(1));
-    INTEGER(result)[0] = mvaddstr((int)INTEGER(y)[0], (int)INTEGER(x)[0], (const char *)CHAR(STRING_ELT(str, 0)));
-    UNPROTECT(1);
-    return result;
+SEXP rc_mvaddstr() {
+    // TODO: implement this
+    return R_NilValue;
 }
 
 SEXP rc_mvaddwstr() {
@@ -998,20 +971,14 @@ SEXP rc_mvgetn_wstr() {
     return R_NilValue;
 }
 
-SEXP rc_mvgetnstr(SEXP y, SEXP x, SEXP str, SEXP n) {
-    SEXP result;
-    PROTECT(result = NEW_INTEGER(1));
-    INTEGER(result)[0] = mvgetnstr((int)INTEGER(y)[0], (int)INTEGER(x)[0], (char *)RAW(str), (int)INTEGER(n)[0]);
-    UNPROTECT(1);
-    return result;
+SEXP rc_mvgetnstr() {
+    // TODO: implement this
+    return R_NilValue;
 }
 
-SEXP rc_mvgetstr(SEXP y, SEXP x, SEXP str) {
-    SEXP result;
-    PROTECT(result = NEW_INTEGER(1));
-    INTEGER(result)[0] = mvgetstr((int)INTEGER(y)[0], (int)INTEGER(x)[0], (char *)RAW(str));
-    UNPROTECT(1);
-    return result;
+SEXP rc_mvgetstr() {
+    // TODO: implement this
+    return R_NilValue;
 }
 
 SEXP rc_mvhline() {
@@ -1191,9 +1158,12 @@ SEXP rc_mvwchgat() {
     return R_NilValue;
 }
 
-SEXP rc_mvwdelch() {
-    // TODO: implement this
-    return R_NilValue;
+SEXP rc_mvwdelch(SEXP win, SEXP y, SEXP x) {
+    SEXP result;
+    PROTECT(result = NEW_INTEGER(1));
+    INTEGER(result)[0] = mvwdelch((WINDOW *)R_ExternalPtrAddr(win), (int)INTEGER(y)[0], (int)INTEGER(x)[0]);
+    UNPROTECT(1);
+    return result;
 }
 
 SEXP rc_mvwget_wch() {
@@ -1206,9 +1176,12 @@ SEXP rc_mvwget_wstr() {
     return R_NilValue;
 }
 
-SEXP rc_mvwgetch() {
-    // TODO: implement this
-    return R_NilValue;
+SEXP rc_mvwgetch(SEXP win, SEXP y, SEXP x) {
+    SEXP result;
+    PROTECT(result = NEW_INTEGER(1));
+    INTEGER(result)[0] = mvwgetch((WINDOW *)R_ExternalPtrAddr(win), (int)INTEGER(y)[0], (int)INTEGER(x)[0]);
+    UNPROTECT(1);
+    return result;
 }
 
 SEXP rc_mvwgetn_wstr() {
@@ -1302,9 +1275,12 @@ SEXP rc_mvwins_wstr() {
     return R_NilValue;
 }
 
-SEXP rc_mvwinsch() {
-    // TODO: implement this
-    return R_NilValue;
+SEXP rc_mvwinsch(SEXP win, SEXP y, SEXP x, SEXP ch) {
+    SEXP result;
+    PROTECT(result = NEW_INTEGER(1));
+    INTEGER(result)[0] = mvwinsch((WINDOW *)R_ExternalPtrAddr(win), (int)INTEGER(y)[0], (int)INTEGER(x)[0], (chtype)INTEGER(ch)[0]);
+    UNPROTECT(1);
+    return result;
 }
 
 SEXP rc_mvwinsnstr() {
@@ -1386,8 +1362,11 @@ SEXP rc_nodelay() {
 }
 
 SEXP rc_noecho() {
-    // TODO: implement this
-    return R_NilValue;
+    SEXP result;
+    PROTECT(result = NEW_INTEGER(1));
+    INTEGER(result)[0] = noecho();
+    UNPROTECT(1);
+    return result;
 }
 
 SEXP rc_nofilter() {
@@ -1484,11 +1463,8 @@ SEXP rc_redrawwin() {
 }
 
 SEXP rc_refresh() {
-    SEXP result;
-    PROTECT(result = NEW_INTEGER(1));
-    INTEGER(result)[0] = refresh();
-    UNPROTECT(1);
-    return result;
+    // TODO: implement this
+    return R_NilValue;
 }
 
 SEXP rc_reset_prog_mode() {
@@ -2077,9 +2053,12 @@ SEXP rc_wcursyncup() {
     return R_NilValue;
 }
 
-SEXP rc_wdelch() {
-    // TODO: implement this
-    return R_NilValue;
+SEXP rc_wdelch(SEXP win) {
+    SEXP result;
+    PROTECT(result = NEW_INTEGER(1));
+    INTEGER(result)[0] = wdelch((WINDOW *)R_ExternalPtrAddr(win));
+    UNPROTECT(1);
+    return result;
 }
 
 SEXP rc_wdeleteln() {
@@ -2122,9 +2101,12 @@ SEXP rc_wgetbkgrnd() {
     return R_NilValue;
 }
 
-SEXP rc_wgetch() {
-    // TODO: implement this
-    return R_NilValue;
+SEXP rc_wgetch(SEXP win) {
+    SEXP result;
+    PROTECT(result = NEW_INTEGER(1));
+    INTEGER(result)[0] = wgetch((WINDOW *)R_ExternalPtrAddr(win));
+    UNPROTECT(1);
+    return result;
 }
 
 SEXP rc_wgetdelay() {
@@ -2228,9 +2210,12 @@ SEXP rc_wins_wstr() {
     return R_NilValue;
 }
 
-SEXP rc_winsch() {
-    // TODO: implement this
-    return R_NilValue;
+SEXP rc_winsch(SEXP win, SEXP ch) {
+    SEXP result;
+    PROTECT(result = NEW_INTEGER(1));
+    INTEGER(result)[0] = winsch((WINDOW *)R_ExternalPtrAddr(win), (chtype)INTEGER(ch)[0]);
+    UNPROTECT(1);
+    return result;
 }
 
 SEXP rc_winsdelln() {

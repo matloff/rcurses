@@ -27,46 +27,47 @@ screenshot:
 The code follows, in which the comments should explain all:
 
 ```R
-library(rcurses)
+# prints to terminal what you type by top-to-bottom then left-to-right
+echo <- function() {
+    # setup rcurses stuff
+    win <- rcurses.initscr()  # initialize curses window
+    rcurses.cbreak()  # typed characters submitted immediately, no wait for Enter
+    rcurses.noecho()  # typed characters are not shown on the screen
 
-# draw the specified character dc
-draw = function(dc) {
-    pos <- getyx()  # get current row, column of the cursor
-    rw <- pos[1]
-    cl <- pos[2]
-    delch()  # delete the character currently there
-    insch(dc)  # insert the new character
-    rw <- rw + 1  # down one column
-    if (rw == nrows) {  # if past bottom, go to top
-        rw <- 0
-        cl <- cl + 1
-        if (cl == ncols)  # if past right edge, go to left
-            cl <- 0
-    }
-    move(rw, cl)  # move the cursor to the specified row, col in screen
-    refresh()  # update the changes on the screen
-}
+    # start screen off blank
+    rcurses.clear(win)  # set the screen to all blanks
+    rcurses.refresh(win)  # render the changes
 
-game <- function() {
-    initscr()  # initialize curses window
-    cbreak()  # typed characters submitted immediately, no wait for Enter
-    noecho()  # typed characters are not shown on the screen
-    nrows <<- LINES()  # number of rows in the screen
-    ncols <<- COLS()  # number of column in the screen
-    clear()  # set the screen to all blanks
-    refresh()  # render the changes
+    # initialize cursor position
+    y <- 0
+    x <- 0
+    rcurses.move(win,y,x)
 
-    while (TRUE) {
-        d <- getch()  # read typed character 
-        if (d == 'q')  # game over
-            break
-        draw(d)  # draw the character
+    # loop forever waiting for input
+    while ((ch <- rcurses.getch(win)) != 'q') {
+        paintCharacter(win,ch)  # draw the character
+        y <- y + 1  # down one column
+        if (y == rcurses.LINES) {  # if past bottom, go to top
+            y <- 0
+            x <- x + 1
+            if (x == rcurses.COLS) {  # if past right edge, go to left
+                x <- 0
+            }
+        }
+        rcurses.move(win,y,x)  # move the cursor to the specified row, col in screen
     }
 
     # now restore normal screen status
-    echo()
-    nocbreak()
-    endwin()  # exit curses app
+    rcurses.echo()
+    rcurses.nocbreak()
+    rcurses.endwin()
+}
+
+# draw the specified character ch
+paintCharacter <- function(window,ch) {
+    rcurses.delch(window)  # delete the character currently there
+    rcurses.insch(window,ch)  # insert the new character
+    rcurses.refresh(window)  # update the changes on the screen
 }
 ```
 

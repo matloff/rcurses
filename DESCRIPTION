@@ -1,20 +1,24 @@
 Package: rcurses
-Version: 0.1
-Title: Access Unix Curses Library from R
-Authors@R: c(person("Norm", "Matloff", email = "normmatloff@gmail.com",
-                    role = c("aut", "cre")),
-             person("Matthew", "Kotila", email = "mrkotila@ucdavis.edu",
-                    role = c("aut")),
-             person("Aaron", "Kaloti", email = "apksingh@ucdavis.edu",
-                    role = c("aut")),
-             person("Vincent", "Yang", email = "vinyang@ucdavis.edu",
-                    role = c("aut")))
-Maintainer: Norm Matloff <normmatloff@gmail.com>
-Description: Provides access to the ncurses implementation of the Unix
-             curses library from R.
-Depends: stats,utils
+Type: Package
+Title: R Interface to curses Library
+Version: 1.0
+Date: 2017-12-13
+Authors@R: c(person("Norm", "Matloff", email = "normmatloff@gmail.com", role = c("aut", "cre")), person("Matthew", "Kotila", role = c("aut"), email = "mrkotila@ucdavis.edu"), person("Aaron", "Kaloti", email="apksingh@ucdavis.edu", role = c("aut")), person("Vincent", "Yang", email="vinyang@ucdavis.edu", role = c("aut")))
+Depends: R (>= 3.4.3)
+Description: R Interface to curses library. Needs ncurses Version >= 6.0.
+SystemRequirements: ncurses (>= 6.0)
+License: MIT + file LICENSE
+LazyLoad: yes
+Packaged: 2017-12-13 00:00:00 UTC-8; kotila
 ByteCompile: yes
 NeedsCompilation: yes
-License: GPL (>= 2)
+Repository: CRAN
+Date/Publication: 2017-12-13 00:00:00
+Author: Norm Matloff [cre, aut],
+  Matthew Kotila [aut],
+  Aaron Kaloti [aut],
+  Vincent Yang [aut]
+Maintainer: Norm Matloff <normmatloff@gmail.com>
 URL: https://github.com/matloff/rcurses
 BugReports: https://github.com/matloff/rcurses/issues
+RoxygenNote: 6.0.1
