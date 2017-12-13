@@ -22,8 +22,6 @@ the bottom of a column is reach, the cursor goes to the top of the next
 column, wrapping around when the rightmost column is reached.  Here is a
 screenshot:
 
-<img src="vignettes/GamePic.png" alt="n1" width="500"/>
-
 The code follows, in which the comments should explain all:
 
 ```R
@@ -96,8 +94,6 @@ Now do the equivalent of calling **debug()** on several functions:a
 ```
 The screen then looks like this:
 
-<img src="vignettes/Nobug.png" alt="n1" width="500"/>
-
 We have temporarily left the R console, and the current window shows a
 list of the functions being debugged.  We hit 'q' to return to the R
 console, with the screen now being
@@ -106,7 +102,3 @@ Later, say we want to temporarily put the function **getnumdigs()** on
 inactive status.  We could call **nobug()** with no arguments, and give
 a command to set the function to inactive.  The screen would now look
 like this:
-
-<img src="vignettes/Nobug1.png" alt="n1" width="500"/>
-
-
