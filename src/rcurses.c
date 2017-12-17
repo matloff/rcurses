@@ -2,6 +2,7 @@
 #include <R.h>
 #include <Rdefines.h>
 #include <Rinternals.h>
+#include <R_ext/Rdynload.h>
 
 SEXP rc__nc_free_and_exit() {
     // TODO: implement this
@@ -2580,3 +2581,8 @@ SEXP rc_COLOR_WHITE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(r
 SEXP rc_COLOR_YELLOW() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = COLOR_YELLOW; UNPROTECT(1); return result; }
 SEXP rc_LINES() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = LINES; UNPROTECT(1); return result; }
 SEXP rc_COLS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = COLS; UNPROTECT(1); return result; }
+
+void R_init_rcurses(DllInfo* info) {
+    R_registerRoutines(info, NULL, NULL, NULL, NULL);
+    R_useDynamicSymbols(info, TRUE);
+}
