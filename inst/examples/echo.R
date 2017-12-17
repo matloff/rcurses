@@ -55,4 +55,4 @@ testEcho <- function() {
     echo()
 }
 
-testEcho()
+# testEcho()

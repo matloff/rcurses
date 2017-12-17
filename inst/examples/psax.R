@@ -140,4 +140,4 @@ testPsax <- function() {
     game()
 }
 
-testPsax()
+# testPsax()
