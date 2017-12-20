@@ -2,18 +2,18 @@ Package: rcurses
 Type: Package
 Title: R Interface to Curses Library
 Version: 1.0
-Date: 2017-12-13
+Date: 2017-12-19
 Authors@R: c(person("Norm", "Matloff", email = "normmatloff@gmail.com", role = c( "cre","aut")), person("Matthew", "Kotila", role = c("aut"), email = "mrkotila@ucdavis.edu"), person("Aaron", "Kaloti", email="apksingh@ucdavis.edu", role = c("aut")), person("Vincent", "Yang", email="vinyang@ucdavis.edu", role = c("aut")))
 Depends: R (>= 3.2.0)
 Description: R Interface to curses library. Needs ncurses Version >= 6.0.
 SystemRequirements: ncurses (>= 6.0)
 License: MIT + file LICENSE
 LazyLoad: yes
-Packaged: 2017-12-13 00:00:00 UTC-8; kotila
+Packaged: 2017-12-19 00:00:00 UTC-8; kotila
 ByteCompile: yes
 NeedsCompilation: yes
 Repository: CRAN
-Date/Publication: 2017-12-13 00:00:00
+Date/Publication: 2017-12-19 00:00:00
 Author: Norm Matloff [cre, aut],
   Matthew Kotila [aut],
   Aaron Kaloti [aut],

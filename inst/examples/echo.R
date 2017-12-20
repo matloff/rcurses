@@ -54,5 +54,3 @@ paintCharacter <- function(window,ch) {
 testEcho <- function() {
     echo()
 }
-
-# testEcho()

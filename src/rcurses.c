@@ -2350,237 +2350,237 @@ SEXP rc_wvline_set() {
     return R_NilValue;
 }
 
-SEXP rc_ERR() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ERR; UNPROTECT(1); return result; }
-SEXP rc_OK() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = OK; UNPROTECT(1); return result; }
+SEXP rc_ERR() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ERR; UNPROTECT(1); return result; }
+SEXP rc_OK() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)OK; UNPROTECT(1); return result; }
 SEXP rc_version() { SEXP result; PROTECT(result = NEW_CHARACTER(1)); SET_STRING_ELT(result, 0, mkChar(curses_version())); UNPROTECT(1); return result; }
-SEXP rc_A_ALTCHARSET() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_ALTCHARSET; UNPROTECT(1); return result; }
-SEXP rc_A_BLINK() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_BLINK; UNPROTECT(1); return result; }
-SEXP rc_A_BOLD() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_BOLD; UNPROTECT(1); return result; }
-SEXP rc_A_DIM() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_DIM; UNPROTECT(1); return result; }
-SEXP rc_A_INVIS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_INVIS; UNPROTECT(1); return result; }
-SEXP rc_A_NORMAL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_NORMAL; UNPROTECT(1); return result; }
-SEXP rc_A_PROTECT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_PROTECT; UNPROTECT(1); return result; }
-SEXP rc_A_REVERSE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_REVERSE; UNPROTECT(1); return result; }
-SEXP rc_A_STANDOUT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_STANDOUT; UNPROTECT(1); return result; }
-SEXP rc_A_UNDERLINE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_UNDERLINE; UNPROTECT(1); return result; }
-SEXP rc_A_HORIZONTAL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_HORIZONTAL; UNPROTECT(1); return result; }
-SEXP rc_A_LEFT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_LEFT; UNPROTECT(1); return result; }
-SEXP rc_A_LOW() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_LOW; UNPROTECT(1); return result; }
-SEXP rc_A_RIGHT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_RIGHT; UNPROTECT(1); return result; }
-SEXP rc_A_TOP() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_TOP; UNPROTECT(1); return result; }
-SEXP rc_A_VERTICAL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_VERTICAL; UNPROTECT(1); return result; }
-SEXP rc_A_CHARTEXT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_CHARTEXT; UNPROTECT(1); return result; }
-SEXP rc_A_ATTRIBUTES() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_ATTRIBUTES; UNPROTECT(1); return result; }
-SEXP rc_A_COLOR() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = A_COLOR; UNPROTECT(1); return result; }
-SEXP rc_KEY_MIN() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_MIN; UNPROTECT(1); return result; }
-SEXP rc_KEY_BREAK() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_BREAK; UNPROTECT(1); return result; }
-SEXP rc_KEY_DOWN() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_DOWN; UNPROTECT(1); return result; }
-SEXP rc_KEY_UP() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_UP; UNPROTECT(1); return result; }
-SEXP rc_KEY_LEFT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_LEFT; UNPROTECT(1); return result; }
-SEXP rc_KEY_RIGHT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_RIGHT; UNPROTECT(1); return result; }
-SEXP rc_KEY_HOME() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_HOME; UNPROTECT(1); return result; }
-SEXP rc_KEY_BACKSPACE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_BACKSPACE; UNPROTECT(1); return result; }
-SEXP rc_KEY_F0() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_F0; UNPROTECT(1); return result; }
-SEXP rc_KEY_F1() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(1); UNPROTECT(1); return result; }
-SEXP rc_KEY_F2() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(2); UNPROTECT(1); return result; }
-SEXP rc_KEY_F3() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(3); UNPROTECT(1); return result; }
-SEXP rc_KEY_F4() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(4); UNPROTECT(1); return result; }
-SEXP rc_KEY_F5() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(5); UNPROTECT(1); return result; }
-SEXP rc_KEY_F6() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(6); UNPROTECT(1); return result; }
-SEXP rc_KEY_F7() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(7); UNPROTECT(1); return result; }
-SEXP rc_KEY_F8() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(8); UNPROTECT(1); return result; }
-SEXP rc_KEY_F9() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(9); UNPROTECT(1); return result; }
-SEXP rc_KEY_F10() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(10); UNPROTECT(1); return result; }
-SEXP rc_KEY_F11() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(11); UNPROTECT(1); return result; }
-SEXP rc_KEY_F12() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(12); UNPROTECT(1); return result; }
-SEXP rc_KEY_F13() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(13); UNPROTECT(1); return result; }
-SEXP rc_KEY_F14() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(14); UNPROTECT(1); return result; }
-SEXP rc_KEY_F15() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(15); UNPROTECT(1); return result; }
-SEXP rc_KEY_F16() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(16); UNPROTECT(1); return result; }
-SEXP rc_KEY_F17() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(17); UNPROTECT(1); return result; }
-SEXP rc_KEY_F18() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(18); UNPROTECT(1); return result; }
-SEXP rc_KEY_F19() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(19); UNPROTECT(1); return result; }
-SEXP rc_KEY_F20() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(20); UNPROTECT(1); return result; }
-SEXP rc_KEY_F21() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(21); UNPROTECT(1); return result; }
-SEXP rc_KEY_F22() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(22); UNPROTECT(1); return result; }
-SEXP rc_KEY_F23() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(23); UNPROTECT(1); return result; }
-SEXP rc_KEY_F24() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(24); UNPROTECT(1); return result; }
-SEXP rc_KEY_F25() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(25); UNPROTECT(1); return result; }
-SEXP rc_KEY_F26() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(26); UNPROTECT(1); return result; }
-SEXP rc_KEY_F27() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(27); UNPROTECT(1); return result; }
-SEXP rc_KEY_F28() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(28); UNPROTECT(1); return result; }
-SEXP rc_KEY_F29() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(29); UNPROTECT(1); return result; }
-SEXP rc_KEY_F30() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(30); UNPROTECT(1); return result; }
-SEXP rc_KEY_F31() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(31); UNPROTECT(1); return result; }
-SEXP rc_KEY_F32() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(32); UNPROTECT(1); return result; }
-SEXP rc_KEY_F33() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(33); UNPROTECT(1); return result; }
-SEXP rc_KEY_F34() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(34); UNPROTECT(1); return result; }
-SEXP rc_KEY_F35() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(35); UNPROTECT(1); return result; }
-SEXP rc_KEY_F36() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(36); UNPROTECT(1); return result; }
-SEXP rc_KEY_F37() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(37); UNPROTECT(1); return result; }
-SEXP rc_KEY_F38() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(38); UNPROTECT(1); return result; }
-SEXP rc_KEY_F39() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(39); UNPROTECT(1); return result; }
-SEXP rc_KEY_F40() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(40); UNPROTECT(1); return result; }
-SEXP rc_KEY_F41() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(41); UNPROTECT(1); return result; }
-SEXP rc_KEY_F42() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(42); UNPROTECT(1); return result; }
-SEXP rc_KEY_F43() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(43); UNPROTECT(1); return result; }
-SEXP rc_KEY_F44() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(44); UNPROTECT(1); return result; }
-SEXP rc_KEY_F45() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(45); UNPROTECT(1); return result; }
-SEXP rc_KEY_F46() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(46); UNPROTECT(1); return result; }
-SEXP rc_KEY_F47() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(47); UNPROTECT(1); return result; }
-SEXP rc_KEY_F48() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(48); UNPROTECT(1); return result; }
-SEXP rc_KEY_F49() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(49); UNPROTECT(1); return result; }
-SEXP rc_KEY_F50() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(50); UNPROTECT(1); return result; }
-SEXP rc_KEY_F51() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(51); UNPROTECT(1); return result; }
-SEXP rc_KEY_F52() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(52); UNPROTECT(1); return result; }
-SEXP rc_KEY_F53() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(53); UNPROTECT(1); return result; }
-SEXP rc_KEY_F54() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(54); UNPROTECT(1); return result; }
-SEXP rc_KEY_F55() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(55); UNPROTECT(1); return result; }
-SEXP rc_KEY_F56() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(56); UNPROTECT(1); return result; }
-SEXP rc_KEY_F57() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(57); UNPROTECT(1); return result; }
-SEXP rc_KEY_F58() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(58); UNPROTECT(1); return result; }
-SEXP rc_KEY_F59() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(59); UNPROTECT(1); return result; }
-SEXP rc_KEY_F60() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(60); UNPROTECT(1); return result; }
-SEXP rc_KEY_F61() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(61); UNPROTECT(1); return result; }
-SEXP rc_KEY_F62() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(62); UNPROTECT(1); return result; }
-SEXP rc_KEY_F63() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0]= KEY_F(63); UNPROTECT(1); return result; }
-SEXP rc_KEY_DL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_DL; UNPROTECT(1); return result; }
-SEXP rc_KEY_IL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_IL; UNPROTECT(1); return result; }
-SEXP rc_KEY_DC() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_DC; UNPROTECT(1); return result; }
-SEXP rc_KEY_IC() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_IC; UNPROTECT(1); return result; }
-SEXP rc_KEY_EIC() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_EIC; UNPROTECT(1); return result; }
-SEXP rc_KEY_CLEAR() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_CLEAR; UNPROTECT(1); return result; }
-SEXP rc_KEY_EOS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_EOS; UNPROTECT(1); return result; }
-SEXP rc_KEY_EOL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_EOL; UNPROTECT(1); return result; }
-SEXP rc_KEY_SF() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SF; UNPROTECT(1); return result; }
-SEXP rc_KEY_SR() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SR; UNPROTECT(1); return result; }
-SEXP rc_KEY_NPAGE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_NPAGE; UNPROTECT(1); return result; }
-SEXP rc_KEY_PPAGE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_PPAGE; UNPROTECT(1); return result; }
-SEXP rc_KEY_STAB() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_STAB; UNPROTECT(1); return result; }
-SEXP rc_KEY_CTAB() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_CTAB; UNPROTECT(1); return result; }
-SEXP rc_KEY_CATAB() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_CATAB; UNPROTECT(1); return result; }
-SEXP rc_KEY_ENTER() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_ENTER; UNPROTECT(1); return result; }
-SEXP rc_KEY_SRESET() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SRESET; UNPROTECT(1); return result; }
-SEXP rc_KEY_RESET() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_RESET; UNPROTECT(1); return result; }
-SEXP rc_KEY_PRINT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_PRINT; UNPROTECT(1); return result; }
-SEXP rc_KEY_LL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_LL; UNPROTECT(1); return result; }
-SEXP rc_KEY_A1() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_A1; UNPROTECT(1); return result; }
-SEXP rc_KEY_A3() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_A3; UNPROTECT(1); return result; }
-SEXP rc_KEY_B2() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_B2; UNPROTECT(1); return result; }
-SEXP rc_KEY_C1() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_C1; UNPROTECT(1); return result; }
-SEXP rc_KEY_C3() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_C3; UNPROTECT(1); return result; }
-SEXP rc_KEY_BTAB() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_BTAB; UNPROTECT(1); return result; }
-SEXP rc_KEY_BEG() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_BEG; UNPROTECT(1); return result; }
-SEXP rc_KEY_CANCEL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_CANCEL; UNPROTECT(1); return result; }
-SEXP rc_KEY_CLOSE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_CLOSE; UNPROTECT(1); return result; }
-SEXP rc_KEY_COMMAND() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_COMMAND; UNPROTECT(1); return result; }
-SEXP rc_KEY_COPY() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_COPY; UNPROTECT(1); return result; }
-SEXP rc_KEY_CREATE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_CREATE; UNPROTECT(1); return result; }
-SEXP rc_KEY_END() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_END; UNPROTECT(1); return result; }
-SEXP rc_KEY_EXIT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_EXIT; UNPROTECT(1); return result; }
-SEXP rc_KEY_FIND() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_FIND; UNPROTECT(1); return result; }
-SEXP rc_KEY_HELP() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_HELP; UNPROTECT(1); return result; }
-SEXP rc_KEY_MARK() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_MARK; UNPROTECT(1); return result; }
-SEXP rc_KEY_MESSAGE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_MESSAGE; UNPROTECT(1); return result; }
-SEXP rc_KEY_MOVE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_MOVE; UNPROTECT(1); return result; }
-SEXP rc_KEY_NEXT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_NEXT; UNPROTECT(1); return result; }
-SEXP rc_KEY_OPEN() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_OPEN; UNPROTECT(1); return result; }
-SEXP rc_KEY_OPTIONS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_OPTIONS; UNPROTECT(1); return result; }
-SEXP rc_KEY_PREVIOUS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_PREVIOUS; UNPROTECT(1); return result; }
-SEXP rc_KEY_REDO() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_REDO; UNPROTECT(1); return result; }
-SEXP rc_KEY_REFERENCE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_REFERENCE; UNPROTECT(1); return result; }
-SEXP rc_KEY_REFRESH() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_REFRESH; UNPROTECT(1); return result; }
-SEXP rc_KEY_REPLACE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_REPLACE; UNPROTECT(1); return result; }
-SEXP rc_KEY_RESTART() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_RESTART; UNPROTECT(1); return result; }
-SEXP rc_KEY_RESUME() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_RESUME; UNPROTECT(1); return result; }
-SEXP rc_KEY_SAVE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SAVE; UNPROTECT(1); return result; }
-SEXP rc_KEY_SBEG() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SBEG; UNPROTECT(1); return result; }
-SEXP rc_KEY_SCANCEL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SCANCEL; UNPROTECT(1); return result; }
-SEXP rc_KEY_SCOMMAND() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SCOMMAND; UNPROTECT(1); return result; }
-SEXP rc_KEY_SCOPY() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SCOPY; UNPROTECT(1); return result; }
-SEXP rc_KEY_SCREATE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SCREATE; UNPROTECT(1); return result; }
-SEXP rc_KEY_SDC() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SDC; UNPROTECT(1); return result; }
-SEXP rc_KEY_SDL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SDL; UNPROTECT(1); return result; }
-SEXP rc_KEY_SELECT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SELECT; UNPROTECT(1); return result; }
-SEXP rc_KEY_SEND() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SEND; UNPROTECT(1); return result; }
-SEXP rc_KEY_SEOL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SEOL; UNPROTECT(1); return result; }
-SEXP rc_KEY_SEXIT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SEXIT; UNPROTECT(1); return result; }
-SEXP rc_KEY_SFIND() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SFIND; UNPROTECT(1); return result; }
-SEXP rc_KEY_SHELP() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SHELP; UNPROTECT(1); return result; }
-SEXP rc_KEY_SHOME() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SHOME; UNPROTECT(1); return result; }
-SEXP rc_KEY_SIC() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SIC; UNPROTECT(1); return result; }
-SEXP rc_KEY_SLEFT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SLEFT; UNPROTECT(1); return result; }
-SEXP rc_KEY_SMESSAGE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SMESSAGE; UNPROTECT(1); return result; }
-SEXP rc_KEY_SMOVE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SMOVE; UNPROTECT(1); return result; }
-SEXP rc_KEY_SNEXT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SNEXT; UNPROTECT(1); return result; }
-SEXP rc_KEY_SOPTIONS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SOPTIONS; UNPROTECT(1); return result; }
-SEXP rc_KEY_SPREVIOUS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SPREVIOUS; UNPROTECT(1); return result; }
-SEXP rc_KEY_SPRINT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SPRINT; UNPROTECT(1); return result; }
-SEXP rc_KEY_SREDO() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SREDO; UNPROTECT(1); return result; }
-SEXP rc_KEY_SREPLACE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SREPLACE; UNPROTECT(1); return result; }
-SEXP rc_KEY_SRIGHT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SRIGHT; UNPROTECT(1); return result; }
-SEXP rc_KEY_SRSUME() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SRSUME; UNPROTECT(1); return result; }
-SEXP rc_KEY_SSAVE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SSAVE; UNPROTECT(1); return result; }
-SEXP rc_KEY_SSUSPEND() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SSUSPEND; UNPROTECT(1); return result; }
-SEXP rc_KEY_SUNDO() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SUNDO; UNPROTECT(1); return result; }
-SEXP rc_KEY_SUSPEND() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_SUSPEND; UNPROTECT(1); return result; }
-SEXP rc_KEY_UNDO() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_UNDO; UNPROTECT(1); return result; }
-SEXP rc_KEY_MOUSE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_MOUSE; UNPROTECT(1); return result; }
-SEXP rc_KEY_RESIZE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_RESIZE; UNPROTECT(1); return result; }
-SEXP rc_KEY_MAX() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = KEY_MAX; UNPROTECT(1); return result; }
-SEXP rc_ACS_BBSS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_BBSS; UNPROTECT(1); return result; }
-SEXP rc_ACS_BLOCK() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_BLOCK; UNPROTECT(1); return result; }
-SEXP rc_ACS_BOARD() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_BOARD; UNPROTECT(1); return result; }
-SEXP rc_ACS_BSBS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_BSBS; UNPROTECT(1); return result; }
-SEXP rc_ACS_BSSB() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_BSSB; UNPROTECT(1); return result; }
-SEXP rc_ACS_BSSS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_BSSS; UNPROTECT(1); return result; }
-SEXP rc_ACS_BTEE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_BTEE; UNPROTECT(1); return result; }
-SEXP rc_ACS_BULLET() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_BULLET; UNPROTECT(1); return result; }
-SEXP rc_ACS_CKBOARD() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_CKBOARD; UNPROTECT(1); return result; }
-SEXP rc_ACS_DARROW() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_DARROW; UNPROTECT(1); return result; }
-SEXP rc_ACS_DEGREE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_DEGREE; UNPROTECT(1); return result; }
-SEXP rc_ACS_DIAMOND() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_DIAMOND; UNPROTECT(1); return result; }
-SEXP rc_ACS_GEQUAL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_GEQUAL; UNPROTECT(1); return result; }
-SEXP rc_ACS_HLINE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_HLINE; UNPROTECT(1); return result; }
-SEXP rc_ACS_LANTERN() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_LANTERN; UNPROTECT(1); return result; }
-SEXP rc_ACS_LARROW() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_LARROW; UNPROTECT(1); return result; }
-SEXP rc_ACS_LEQUAL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_LEQUAL; UNPROTECT(1); return result; }
-SEXP rc_ACS_LLCORNER() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_LLCORNER; UNPROTECT(1); return result; }
-SEXP rc_ACS_LRCORNER() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_LRCORNER; UNPROTECT(1); return result; }
-SEXP rc_ACS_LTEE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_LTEE; UNPROTECT(1); return result; }
-SEXP rc_ACS_NEQUAL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_NEQUAL; UNPROTECT(1); return result; }
-SEXP rc_ACS_PI() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_PI; UNPROTECT(1); return result; }
-SEXP rc_ACS_PLMINUS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_PLMINUS; UNPROTECT(1); return result; }
-SEXP rc_ACS_PLUS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_PLUS; UNPROTECT(1); return result; }
-SEXP rc_ACS_RARROW() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_RARROW; UNPROTECT(1); return result; }
-SEXP rc_ACS_RTEE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_RTEE; UNPROTECT(1); return result; }
-SEXP rc_ACS_S1() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_S1; UNPROTECT(1); return result; }
-SEXP rc_ACS_S3() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_S3; UNPROTECT(1); return result; }
-SEXP rc_ACS_S7() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_S7; UNPROTECT(1); return result; }
-SEXP rc_ACS_S9() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_S9; UNPROTECT(1); return result; }
-SEXP rc_ACS_SBBS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_SBBS; UNPROTECT(1); return result; }
-SEXP rc_ACS_SBSB() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_SBSB; UNPROTECT(1); return result; }
-SEXP rc_ACS_SBSS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_SBSS; UNPROTECT(1); return result; }
-SEXP rc_ACS_SSBB() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_SSBB; UNPROTECT(1); return result; }
-SEXP rc_ACS_SSBS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_SSBS; UNPROTECT(1); return result; }
-SEXP rc_ACS_SSSB() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_SSSB; UNPROTECT(1); return result; }
-SEXP rc_ACS_SSSS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_SSSS; UNPROTECT(1); return result; }
-SEXP rc_ACS_STERLING() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_STERLING; UNPROTECT(1); return result; }
-SEXP rc_ACS_TTEE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_TTEE; UNPROTECT(1); return result; }
-SEXP rc_ACS_UARROW() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_UARROW; UNPROTECT(1); return result; }
-SEXP rc_ACS_ULCORNER() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_ULCORNER; UNPROTECT(1); return result; }
-SEXP rc_ACS_URCORNER() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_URCORNER; UNPROTECT(1); return result; }
-SEXP rc_ACS_VLINE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = ACS_VLINE; UNPROTECT(1); return result; }
-SEXP rc_COLOR_BLACK() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = COLOR_BLACK; UNPROTECT(1); return result; }
-SEXP rc_COLOR_BLUE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = COLOR_BLUE; UNPROTECT(1); return result; }
-SEXP rc_COLOR_CYAN() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = COLOR_CYAN; UNPROTECT(1); return result; }
-SEXP rc_COLOR_GREEN() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = COLOR_GREEN; UNPROTECT(1); return result; }
-SEXP rc_COLOR_MAGENTA() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = COLOR_MAGENTA; UNPROTECT(1); return result; }
-SEXP rc_COLOR_RED() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = COLOR_RED; UNPROTECT(1); return result; }
-SEXP rc_COLOR_WHITE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = COLOR_WHITE; UNPROTECT(1); return result; }
-SEXP rc_COLOR_YELLOW() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = COLOR_YELLOW; UNPROTECT(1); return result; }
-SEXP rc_LINES() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = LINES; UNPROTECT(1); return result; }
-SEXP rc_COLS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = COLS; UNPROTECT(1); return result; }
+SEXP rc_A_ALTCHARSET() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_ALTCHARSET; UNPROTECT(1); return result; }
+SEXP rc_A_BLINK() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_BLINK; UNPROTECT(1); return result; }
+SEXP rc_A_BOLD() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_BOLD; UNPROTECT(1); return result; }
+SEXP rc_A_DIM() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_DIM; UNPROTECT(1); return result; }
+SEXP rc_A_INVIS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_INVIS; UNPROTECT(1); return result; }
+SEXP rc_A_NORMAL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_NORMAL; UNPROTECT(1); return result; }
+SEXP rc_A_PROTECT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_PROTECT; UNPROTECT(1); return result; }
+SEXP rc_A_REVERSE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_REVERSE; UNPROTECT(1); return result; }
+SEXP rc_A_STANDOUT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_STANDOUT; UNPROTECT(1); return result; }
+SEXP rc_A_UNDERLINE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_UNDERLINE; UNPROTECT(1); return result; }
+SEXP rc_A_HORIZONTAL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_HORIZONTAL; UNPROTECT(1); return result; }
+SEXP rc_A_LEFT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_LEFT; UNPROTECT(1); return result; }
+SEXP rc_A_LOW() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_LOW; UNPROTECT(1); return result; }
+SEXP rc_A_RIGHT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_RIGHT; UNPROTECT(1); return result; }
+SEXP rc_A_TOP() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_TOP; UNPROTECT(1); return result; }
+SEXP rc_A_VERTICAL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_VERTICAL; UNPROTECT(1); return result; }
+SEXP rc_A_CHARTEXT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_CHARTEXT; UNPROTECT(1); return result; }
+SEXP rc_A_ATTRIBUTES() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_ATTRIBUTES; UNPROTECT(1); return result; }
+SEXP rc_A_COLOR() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)A_COLOR; UNPROTECT(1); return result; }
+SEXP rc_KEY_MIN() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_MIN; UNPROTECT(1); return result; }
+SEXP rc_KEY_BREAK() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_BREAK; UNPROTECT(1); return result; }
+SEXP rc_KEY_DOWN() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_DOWN; UNPROTECT(1); return result; }
+SEXP rc_KEY_UP() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_UP; UNPROTECT(1); return result; }
+SEXP rc_KEY_LEFT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_LEFT; UNPROTECT(1); return result; }
+SEXP rc_KEY_RIGHT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_RIGHT; UNPROTECT(1); return result; }
+SEXP rc_KEY_HOME() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_HOME; UNPROTECT(1); return result; }
+SEXP rc_KEY_BACKSPACE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_BACKSPACE; UNPROTECT(1); return result; }
+SEXP rc_KEY_F0() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F0; UNPROTECT(1); return result; }
+SEXP rc_KEY_F1() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(1); UNPROTECT(1); return result; }
+SEXP rc_KEY_F2() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(2); UNPROTECT(1); return result; }
+SEXP rc_KEY_F3() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(3); UNPROTECT(1); return result; }
+SEXP rc_KEY_F4() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(4); UNPROTECT(1); return result; }
+SEXP rc_KEY_F5() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(5); UNPROTECT(1); return result; }
+SEXP rc_KEY_F6() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(6); UNPROTECT(1); return result; }
+SEXP rc_KEY_F7() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(7); UNPROTECT(1); return result; }
+SEXP rc_KEY_F8() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(8); UNPROTECT(1); return result; }
+SEXP rc_KEY_F9() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(9); UNPROTECT(1); return result; }
+SEXP rc_KEY_F10() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(10); UNPROTECT(1); return result; }
+SEXP rc_KEY_F11() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(11); UNPROTECT(1); return result; }
+SEXP rc_KEY_F12() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(12); UNPROTECT(1); return result; }
+SEXP rc_KEY_F13() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(13); UNPROTECT(1); return result; }
+SEXP rc_KEY_F14() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(14); UNPROTECT(1); return result; }
+SEXP rc_KEY_F15() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(15); UNPROTECT(1); return result; }
+SEXP rc_KEY_F16() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(16); UNPROTECT(1); return result; }
+SEXP rc_KEY_F17() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(17); UNPROTECT(1); return result; }
+SEXP rc_KEY_F18() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(18); UNPROTECT(1); return result; }
+SEXP rc_KEY_F19() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(19); UNPROTECT(1); return result; }
+SEXP rc_KEY_F20() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(20); UNPROTECT(1); return result; }
+SEXP rc_KEY_F21() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(21); UNPROTECT(1); return result; }
+SEXP rc_KEY_F22() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(22); UNPROTECT(1); return result; }
+SEXP rc_KEY_F23() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(23); UNPROTECT(1); return result; }
+SEXP rc_KEY_F24() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(24); UNPROTECT(1); return result; }
+SEXP rc_KEY_F25() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(25); UNPROTECT(1); return result; }
+SEXP rc_KEY_F26() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(26); UNPROTECT(1); return result; }
+SEXP rc_KEY_F27() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(27); UNPROTECT(1); return result; }
+SEXP rc_KEY_F28() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(28); UNPROTECT(1); return result; }
+SEXP rc_KEY_F29() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(29); UNPROTECT(1); return result; }
+SEXP rc_KEY_F30() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(30); UNPROTECT(1); return result; }
+SEXP rc_KEY_F31() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(31); UNPROTECT(1); return result; }
+SEXP rc_KEY_F32() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(32); UNPROTECT(1); return result; }
+SEXP rc_KEY_F33() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(33); UNPROTECT(1); return result; }
+SEXP rc_KEY_F34() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(34); UNPROTECT(1); return result; }
+SEXP rc_KEY_F35() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(35); UNPROTECT(1); return result; }
+SEXP rc_KEY_F36() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(36); UNPROTECT(1); return result; }
+SEXP rc_KEY_F37() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(37); UNPROTECT(1); return result; }
+SEXP rc_KEY_F38() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(38); UNPROTECT(1); return result; }
+SEXP rc_KEY_F39() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(39); UNPROTECT(1); return result; }
+SEXP rc_KEY_F40() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(40); UNPROTECT(1); return result; }
+SEXP rc_KEY_F41() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(41); UNPROTECT(1); return result; }
+SEXP rc_KEY_F42() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(42); UNPROTECT(1); return result; }
+SEXP rc_KEY_F43() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(43); UNPROTECT(1); return result; }
+SEXP rc_KEY_F44() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(44); UNPROTECT(1); return result; }
+SEXP rc_KEY_F45() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(45); UNPROTECT(1); return result; }
+SEXP rc_KEY_F46() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(46); UNPROTECT(1); return result; }
+SEXP rc_KEY_F47() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(47); UNPROTECT(1); return result; }
+SEXP rc_KEY_F48() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(48); UNPROTECT(1); return result; }
+SEXP rc_KEY_F49() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(49); UNPROTECT(1); return result; }
+SEXP rc_KEY_F50() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(50); UNPROTECT(1); return result; }
+SEXP rc_KEY_F51() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(51); UNPROTECT(1); return result; }
+SEXP rc_KEY_F52() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(52); UNPROTECT(1); return result; }
+SEXP rc_KEY_F53() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(53); UNPROTECT(1); return result; }
+SEXP rc_KEY_F54() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(54); UNPROTECT(1); return result; }
+SEXP rc_KEY_F55() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(55); UNPROTECT(1); return result; }
+SEXP rc_KEY_F56() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(56); UNPROTECT(1); return result; }
+SEXP rc_KEY_F57() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(57); UNPROTECT(1); return result; }
+SEXP rc_KEY_F58() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(58); UNPROTECT(1); return result; }
+SEXP rc_KEY_F59() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(59); UNPROTECT(1); return result; }
+SEXP rc_KEY_F60() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(60); UNPROTECT(1); return result; }
+SEXP rc_KEY_F61() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(61); UNPROTECT(1); return result; }
+SEXP rc_KEY_F62() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(62); UNPROTECT(1); return result; }
+SEXP rc_KEY_F63() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_F(63); UNPROTECT(1); return result; }
+SEXP rc_KEY_DL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_DL; UNPROTECT(1); return result; }
+SEXP rc_KEY_IL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_IL; UNPROTECT(1); return result; }
+SEXP rc_KEY_DC() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_DC; UNPROTECT(1); return result; }
+SEXP rc_KEY_IC() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_IC; UNPROTECT(1); return result; }
+SEXP rc_KEY_EIC() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_EIC; UNPROTECT(1); return result; }
+SEXP rc_KEY_CLEAR() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_CLEAR; UNPROTECT(1); return result; }
+SEXP rc_KEY_EOS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_EOS; UNPROTECT(1); return result; }
+SEXP rc_KEY_EOL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_EOL; UNPROTECT(1); return result; }
+SEXP rc_KEY_SF() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SF; UNPROTECT(1); return result; }
+SEXP rc_KEY_SR() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SR; UNPROTECT(1); return result; }
+SEXP rc_KEY_NPAGE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_NPAGE; UNPROTECT(1); return result; }
+SEXP rc_KEY_PPAGE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_PPAGE; UNPROTECT(1); return result; }
+SEXP rc_KEY_STAB() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_STAB; UNPROTECT(1); return result; }
+SEXP rc_KEY_CTAB() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_CTAB; UNPROTECT(1); return result; }
+SEXP rc_KEY_CATAB() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_CATAB; UNPROTECT(1); return result; }
+SEXP rc_KEY_ENTER() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_ENTER; UNPROTECT(1); return result; }
+SEXP rc_KEY_SRESET() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SRESET; UNPROTECT(1); return result; }
+SEXP rc_KEY_RESET() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_RESET; UNPROTECT(1); return result; }
+SEXP rc_KEY_PRINT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_PRINT; UNPROTECT(1); return result; }
+SEXP rc_KEY_LL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_LL; UNPROTECT(1); return result; }
+SEXP rc_KEY_A1() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_A1; UNPROTECT(1); return result; }
+SEXP rc_KEY_A3() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_A3; UNPROTECT(1); return result; }
+SEXP rc_KEY_B2() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_B2; UNPROTECT(1); return result; }
+SEXP rc_KEY_C1() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_C1; UNPROTECT(1); return result; }
+SEXP rc_KEY_C3() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_C3; UNPROTECT(1); return result; }
+SEXP rc_KEY_BTAB() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_BTAB; UNPROTECT(1); return result; }
+SEXP rc_KEY_BEG() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_BEG; UNPROTECT(1); return result; }
+SEXP rc_KEY_CANCEL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_CANCEL; UNPROTECT(1); return result; }
+SEXP rc_KEY_CLOSE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_CLOSE; UNPROTECT(1); return result; }
+SEXP rc_KEY_COMMAND() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_COMMAND; UNPROTECT(1); return result; }
+SEXP rc_KEY_COPY() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_COPY; UNPROTECT(1); return result; }
+SEXP rc_KEY_CREATE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_CREATE; UNPROTECT(1); return result; }
+SEXP rc_KEY_END() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_END; UNPROTECT(1); return result; }
+SEXP rc_KEY_EXIT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_EXIT; UNPROTECT(1); return result; }
+SEXP rc_KEY_FIND() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_FIND; UNPROTECT(1); return result; }
+SEXP rc_KEY_HELP() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_HELP; UNPROTECT(1); return result; }
+SEXP rc_KEY_MARK() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_MARK; UNPROTECT(1); return result; }
+SEXP rc_KEY_MESSAGE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_MESSAGE; UNPROTECT(1); return result; }
+SEXP rc_KEY_MOVE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_MOVE; UNPROTECT(1); return result; }
+SEXP rc_KEY_NEXT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_NEXT; UNPROTECT(1); return result; }
+SEXP rc_KEY_OPEN() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_OPEN; UNPROTECT(1); return result; }
+SEXP rc_KEY_OPTIONS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_OPTIONS; UNPROTECT(1); return result; }
+SEXP rc_KEY_PREVIOUS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_PREVIOUS; UNPROTECT(1); return result; }
+SEXP rc_KEY_REDO() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_REDO; UNPROTECT(1); return result; }
+SEXP rc_KEY_REFERENCE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_REFERENCE; UNPROTECT(1); return result; }
+SEXP rc_KEY_REFRESH() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_REFRESH; UNPROTECT(1); return result; }
+SEXP rc_KEY_REPLACE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_REPLACE; UNPROTECT(1); return result; }
+SEXP rc_KEY_RESTART() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_RESTART; UNPROTECT(1); return result; }
+SEXP rc_KEY_RESUME() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_RESUME; UNPROTECT(1); return result; }
+SEXP rc_KEY_SAVE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SAVE; UNPROTECT(1); return result; }
+SEXP rc_KEY_SBEG() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SBEG; UNPROTECT(1); return result; }
+SEXP rc_KEY_SCANCEL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SCANCEL; UNPROTECT(1); return result; }
+SEXP rc_KEY_SCOMMAND() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SCOMMAND; UNPROTECT(1); return result; }
+SEXP rc_KEY_SCOPY() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SCOPY; UNPROTECT(1); return result; }
+SEXP rc_KEY_SCREATE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SCREATE; UNPROTECT(1); return result; }
+SEXP rc_KEY_SDC() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SDC; UNPROTECT(1); return result; }
+SEXP rc_KEY_SDL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SDL; UNPROTECT(1); return result; }
+SEXP rc_KEY_SELECT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SELECT; UNPROTECT(1); return result; }
+SEXP rc_KEY_SEND() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SEND; UNPROTECT(1); return result; }
+SEXP rc_KEY_SEOL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SEOL; UNPROTECT(1); return result; }
+SEXP rc_KEY_SEXIT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SEXIT; UNPROTECT(1); return result; }
+SEXP rc_KEY_SFIND() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SFIND; UNPROTECT(1); return result; }
+SEXP rc_KEY_SHELP() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SHELP; UNPROTECT(1); return result; }
+SEXP rc_KEY_SHOME() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SHOME; UNPROTECT(1); return result; }
+SEXP rc_KEY_SIC() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SIC; UNPROTECT(1); return result; }
+SEXP rc_KEY_SLEFT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SLEFT; UNPROTECT(1); return result; }
+SEXP rc_KEY_SMESSAGE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SMESSAGE; UNPROTECT(1); return result; }
+SEXP rc_KEY_SMOVE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SMOVE; UNPROTECT(1); return result; }
+SEXP rc_KEY_SNEXT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SNEXT; UNPROTECT(1); return result; }
+SEXP rc_KEY_SOPTIONS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SOPTIONS; UNPROTECT(1); return result; }
+SEXP rc_KEY_SPREVIOUS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SPREVIOUS; UNPROTECT(1); return result; }
+SEXP rc_KEY_SPRINT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SPRINT; UNPROTECT(1); return result; }
+SEXP rc_KEY_SREDO() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SREDO; UNPROTECT(1); return result; }
+SEXP rc_KEY_SREPLACE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SREPLACE; UNPROTECT(1); return result; }
+SEXP rc_KEY_SRIGHT() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SRIGHT; UNPROTECT(1); return result; }
+SEXP rc_KEY_SRSUME() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SRSUME; UNPROTECT(1); return result; }
+SEXP rc_KEY_SSAVE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SSAVE; UNPROTECT(1); return result; }
+SEXP rc_KEY_SSUSPEND() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SSUSPEND; UNPROTECT(1); return result; }
+SEXP rc_KEY_SUNDO() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SUNDO; UNPROTECT(1); return result; }
+SEXP rc_KEY_SUSPEND() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_SUSPEND; UNPROTECT(1); return result; }
+SEXP rc_KEY_UNDO() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_UNDO; UNPROTECT(1); return result; }
+SEXP rc_KEY_MOUSE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_MOUSE; UNPROTECT(1); return result; }
+SEXP rc_KEY_RESIZE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_RESIZE; UNPROTECT(1); return result; }
+SEXP rc_KEY_MAX() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)KEY_MAX; UNPROTECT(1); return result; }
+SEXP rc_ACS_BBSS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_BBSS; UNPROTECT(1); return result; }
+SEXP rc_ACS_BLOCK() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_BLOCK; UNPROTECT(1); return result; }
+SEXP rc_ACS_BOARD() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_BOARD; UNPROTECT(1); return result; }
+SEXP rc_ACS_BSBS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_BSBS; UNPROTECT(1); return result; }
+SEXP rc_ACS_BSSB() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_BSSB; UNPROTECT(1); return result; }
+SEXP rc_ACS_BSSS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_BSSS; UNPROTECT(1); return result; }
+SEXP rc_ACS_BTEE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_BTEE; UNPROTECT(1); return result; }
+SEXP rc_ACS_BULLET() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_BULLET; UNPROTECT(1); return result; }
+SEXP rc_ACS_CKBOARD() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_CKBOARD; UNPROTECT(1); return result; }
+SEXP rc_ACS_DARROW() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_DARROW; UNPROTECT(1); return result; }
+SEXP rc_ACS_DEGREE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_DEGREE; UNPROTECT(1); return result; }
+SEXP rc_ACS_DIAMOND() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_DIAMOND; UNPROTECT(1); return result; }
+SEXP rc_ACS_GEQUAL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_GEQUAL; UNPROTECT(1); return result; }
+SEXP rc_ACS_HLINE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_HLINE; UNPROTECT(1); return result; }
+SEXP rc_ACS_LANTERN() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_LANTERN; UNPROTECT(1); return result; }
+SEXP rc_ACS_LARROW() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_LARROW; UNPROTECT(1); return result; }
+SEXP rc_ACS_LEQUAL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_LEQUAL; UNPROTECT(1); return result; }
+SEXP rc_ACS_LLCORNER() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_LLCORNER; UNPROTECT(1); return result; }
+SEXP rc_ACS_LRCORNER() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_LRCORNER; UNPROTECT(1); return result; }
+SEXP rc_ACS_LTEE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_LTEE; UNPROTECT(1); return result; }
+SEXP rc_ACS_NEQUAL() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_NEQUAL; UNPROTECT(1); return result; }
+SEXP rc_ACS_PI() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_PI; UNPROTECT(1); return result; }
+SEXP rc_ACS_PLMINUS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_PLMINUS; UNPROTECT(1); return result; }
+SEXP rc_ACS_PLUS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_PLUS; UNPROTECT(1); return result; }
+SEXP rc_ACS_RARROW() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_RARROW; UNPROTECT(1); return result; }
+SEXP rc_ACS_RTEE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_RTEE; UNPROTECT(1); return result; }
+SEXP rc_ACS_S1() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_S1; UNPROTECT(1); return result; }
+SEXP rc_ACS_S3() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_S3; UNPROTECT(1); return result; }
+SEXP rc_ACS_S7() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_S7; UNPROTECT(1); return result; }
+SEXP rc_ACS_S9() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_S9; UNPROTECT(1); return result; }
+SEXP rc_ACS_SBBS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_SBBS; UNPROTECT(1); return result; }
+SEXP rc_ACS_SBSB() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_SBSB; UNPROTECT(1); return result; }
+SEXP rc_ACS_SBSS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_SBSS; UNPROTECT(1); return result; }
+SEXP rc_ACS_SSBB() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_SSBB; UNPROTECT(1); return result; }
+SEXP rc_ACS_SSBS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_SSBS; UNPROTECT(1); return result; }
+SEXP rc_ACS_SSSB() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_SSSB; UNPROTECT(1); return result; }
+SEXP rc_ACS_SSSS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_SSSS; UNPROTECT(1); return result; }
+SEXP rc_ACS_STERLING() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_STERLING; UNPROTECT(1); return result; }
+SEXP rc_ACS_TTEE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_TTEE; UNPROTECT(1); return result; }
+SEXP rc_ACS_UARROW() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_UARROW; UNPROTECT(1); return result; }
+SEXP rc_ACS_ULCORNER() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_ULCORNER; UNPROTECT(1); return result; }
+SEXP rc_ACS_URCORNER() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_URCORNER; UNPROTECT(1); return result; }
+SEXP rc_ACS_VLINE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ACS_VLINE; UNPROTECT(1); return result; }
+SEXP rc_COLOR_BLACK() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)COLOR_BLACK; UNPROTECT(1); return result; }
+SEXP rc_COLOR_BLUE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)COLOR_BLUE; UNPROTECT(1); return result; }
+SEXP rc_COLOR_CYAN() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)COLOR_CYAN; UNPROTECT(1); return result; }
+SEXP rc_COLOR_GREEN() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)COLOR_GREEN; UNPROTECT(1); return result; }
+SEXP rc_COLOR_MAGENTA() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)COLOR_MAGENTA; UNPROTECT(1); return result; }
+SEXP rc_COLOR_RED() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)COLOR_RED; UNPROTECT(1); return result; }
+SEXP rc_COLOR_WHITE() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)COLOR_WHITE; UNPROTECT(1); return result; }
+SEXP rc_COLOR_YELLOW() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)COLOR_YELLOW; UNPROTECT(1); return result; }
+SEXP rc_LINES() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)LINES; UNPROTECT(1); return result; }
+SEXP rc_COLS() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)COLS; UNPROTECT(1); return result; }
 
 void R_init_rcurses(DllInfo* info) {
     R_registerRoutines(info, NULL, NULL, NULL, NULL);

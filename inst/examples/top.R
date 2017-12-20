@@ -1,7 +1,7 @@
 library(rcurses)
 library(parallel)
 
-# imitates unix 'top' command 
+# imitates subset of unix 'top' command 
 top <- function() {
     # setup rcurses stuff
     win <- rcurses.initscr()
@@ -94,5 +94,3 @@ testTop <- function() {
     top()
     return(NULL)
 }
-
-# testTop()

@@ -151,5 +151,3 @@ testFtns <- function() {
    nobug(c('funcA','funcB','funcC'))
    return(NULL)
 }
-
-# testFtns()

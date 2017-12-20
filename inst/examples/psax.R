@@ -139,5 +139,3 @@ restore <- function() {
 testPsax <- function() {
     game()
 }
-
-# testPsax()
