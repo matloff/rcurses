@@ -21,7 +21,9 @@ yet; let us know if you have requests.)
 
 ## Prerequisites
 
-At least R v3.2.0.
+At least R v3.2.0 (`R --version`).
+
+At least ncurses v6.0.
 
 ## Installation
 
