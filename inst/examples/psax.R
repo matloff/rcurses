@@ -2,13 +2,13 @@ library(rcurses)
 
 pids <<- list()
 
-game <- function() {
+psax <- function() {
     win <- start()
     nrows <<- rcurses.LINES  # number of rows in the screen
     ncols <<- rcurses.COLS  # number of column in the screen
     rcurses.clear(win)  # set the screen to all blanks
     # r, c will be current screen row, column of cursor
-    psax(win)
+    psaxcore(win)
 
     d <<- 0
     rcurses.refresh(win)
@@ -44,7 +44,7 @@ game <- function() {
             rerun(win)
         }
 
-        # end psax
+        # user quits
         else if (ch == 'q')
             break
     }
@@ -60,7 +60,7 @@ start <- function() {
     return(win)
 }
 
-psax <- function(window) {
+psaxcore <- function(window) {
     res <- runcmd()
 
     r <<- -1  # top row of screen
@@ -125,7 +125,7 @@ rerun <- function(window) {
     nrows <<- rcurses.LINES  # number of rows in the screen
     ncols <<- rcurses.COLS  # number of column in the screen
     rcurses.clear(window)  # set the screen to all blanks
-    psax(window)
+    psaxcore(window)
     d <<- 0
     rcurses.refresh(window)
 }
@@ -137,5 +137,5 @@ restore <- function() {
 }
 
 testPsax <- function() {
-    game()
+    psax()
 }
