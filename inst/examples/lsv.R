@@ -63,17 +63,24 @@ displayObjects <- function(window) {
     rcurses.addstr(window,"[Hit Enter to exit.]",currRowIndex,0,)
     currRowIndex <- currRowIndex + 1
     rcurses.addstr(window,labelsRow,currRowIndex,0,)
-    currRowIndex <- currRowIndex + 1
+    currRowIndex <- currRowIndex + 2
     # Display the variable rows.
-    for (index in 1:length(namesToPrint)) {
+    for (index in 1:min((rcurses.LINES-3),length(namesToPrint))) {
         # For this object, display name and class,
         # padding with correct amount of trailing spaces so the table looks nice.
-        rcurses.addstr(window,padStringWithTrailingSpaces(namesToPrint[index],nameColWidth),currRowIndex,0)
+        rcurses.addstr(
+           window,padStringWithTrailingSpaces(namesToPrint[index],
+           nameColWidth),currRowIndex,0)
         rcurses.addstr(window,classesToPrint[index])
 
         currRowIndex <- currRowIndex + 1
+        if (currRowIndex == rcurses.LINES-1) {
+           rcurses.addstr(window,"etc.",currRowIndex,0,)
+           break
+        }
+
     }
-    rcurses.move(window,currRowIndex + 1,0)
+    ### rcurses.move(window,currRowIndex + 1,0)
 
     # Make user hit Enter to leave.
     cmd <- rcurses.getstr(window)
