@@ -4,8 +4,8 @@ Access the
 library from R.
 
 Little known to even many programmers, the **curses** library in
-Unix-family systems (Linux, Mac, etc.) forms the basis for a number
-of text-based applications, such as the **vim** and **emacs** text
+Unix-family systems (Linux, Mac, etc.) forms the basis for a number of
+popular text-based applications, such as the **vim** and **emacs** text
 editors.
 
 For instance, in **vim**, hitting the 'j' key causes the screen cursor to
@@ -14,10 +14,10 @@ happen.
 
 The [ncurses](https://en.wikipedia.org/wiki/Ncurses) implementation of
 the curses API is written in C, but interfaces from other languages have
-been developed, Python being a prominent example. Aiming toward building
-an advanced R debugging tool, we have developed our package, **rcurses**,
-to do the same for R. (Not all of the **curses** library is implemented
-yet; let us know if you have requests.)
+been developed, Python being a prominent example.  We have now developed
+our package, **rcurses**, to do the same for R. (Not all of the
+**curses** library is implemented yet; let us know if you have
+requests.)
 
 ## Prerequisites
 

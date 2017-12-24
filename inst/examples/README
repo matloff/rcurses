@@ -1,0 +1,11 @@
+
+Simple examples with various degrees of sophistication.  Users are
+invited to refine them.
+
+echo.R:
+
+   Extremely simple game.  Player keeps hitting keys, which are echoed,
+   while the cursor moves downward.  Upon hitting the bottom row, cursor
+   moves to top of next column.  Upon hitting bottom of last column,
+   cursor moves to top of first column.  Hit 'q' to quit.
+
