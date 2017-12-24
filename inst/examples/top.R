@@ -9,10 +9,12 @@ top <- function() {
     rcurses.noecho()
 
     # start loop in background for updating top content via ps
+    notDone <<- TRUE
     mcparallel(getAndDrawProcessesLoop(win))
 
     # check for q to stop program
     while (rcurses.getch(win) != 'q') {  }
+    notDone <<- FALSE
 
     # close out rcurses stuff
     rcurses.echo()
@@ -23,7 +25,7 @@ top <- function() {
 
 # fetch and draw top every second
 getAndDrawProcessesLoop <- function(window) {
-    while (1) {
+    while (notDone) {
         lastRefresh <- Sys.time()
         processes <- getProcesses()
         drawProcesses(window,processes)
