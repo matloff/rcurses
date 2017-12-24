@@ -35,107 +35,68 @@ install.packages('rcurses')
 
 ## Examples
 
-### top
+These examples are available in the **examples** directory of the
+package.
 
-The UNIX '[top](https://en.wikipedia.org/wiki/Top_(software))' command
-displays a list of running processes in real-time. The UNIX
-'[ps](https://en.wikipedia.org/wiki/Ps_(Unix))' command is very similar,
-just that the list of processes and their statuses don't update in
-real-time.
+### echo
 
-The top.R example builds a limited but functional mock of the UNIX 'top'
-command by repeatedly querying the UNIX 'ps' command and using that as the
-input to a constantly-refreshing text user interface implemented using
-rcurses.
+An extremely simple game.  The player keeps hitting keys, which are
+echoed, while the cursor moves downward.  Upon hitting the bottom row,
+cursor moves to top of next column.  Upon hitting bottom of last column,
+cursor moves to top of first column.  Hit 'q' to quit.
 
 ```R
-# imitates subset of unix 'top' command 
-top <- function() {
+library(rcurses)
+
+echo <- function() {
     # setup rcurses stuff
-    win <- rcurses.initscr()
-    rcurses.cbreak()
-    rcurses.noecho()
+    win <- rcurses.initscr()  # initialize curses window
+    rcurses.cbreak()  # typed characters submitted immediately, no wait for Enter
+    rcurses.noecho()  # typed characters are not shown on the screen
 
-    # start loop in background for updating top content via ps
-    mcparallel(getAndDrawProcessesLoop(win))
+    # start screen off blank
+    rcurses.clear(win)  # set the screen to all blanks
+    rcurses.refresh(win)  # render the changes
 
-    # check for q to stop program
-    while (rcurses.getch(win) != 'q') {  }
+    # initialize cursor position
+    y <- 0
+    x <- 0
+    rcurses.move(win,y,x)
 
-    # close out rcurses stuff
+    # loop forever waiting for input
+    while ((ch <- rcurses.getch(win)) != 'q') {
+        paintCharacter(win,ch)  # draw the character
+        y <- y + 1  # down one column
+        if (y == rcurses.LINES) {  # if past bottom, go to top
+            y <- 0
+            x <- x + 1
+            if (x == rcurses.COLS) {  # if past right edge, go to left
+                x <- 0
+            }
+        }
+        rcurses.move(win,y,x)  # move the cursor to the specified row, col in screen
+    }
+
+    # now restore normal screen status
     rcurses.echo()
     rcurses.nocbreak()
     rcurses.endwin()
-    return(NULL)
 }
 
-# fetch and draw top every second
-getAndDrawProcessesLoop <- function(window) {
-    while (1) {
-        lastRefresh <- Sys.time()
-        processes <- getProcesses()
-        drawProcesses(window,processes)
-        while (Sys.time() - lastRefresh < 1) {}
-    }
-    return(NULL)
+# draw the specified character ch
+paintCharacter <- function(window,ch) {
+    rcurses.delch(window)  # delete the character currently there
+    rcurses.insch(window,ch)  # insert the new character
+    rcurses.refresh(window)  # update the changes on the screen
 }
 
-# run ps and put process data into store
-getProcesses <- function() {
-    processes <- list()
-    psLines <- system('ps -axrwwo pid,%cpu,time,%mem,state,user,comm',intern=TRUE)[-(1)]
-    for (line in psLines) {
-
-        # use regular expression to get groups from ps output
-        pattern <- '^[ ]*([^ ]+)[ ]+([^ ]+)[ ]+([^ ]+)[ ]+([^ ]+)+[ ]+([^ ]+)[ ]+([^ ]+)[ ]+(.*)$'
-
-        # store each group as a substring
-        process <- list()
-        process$pid <- gsub(pattern,'\\1',line)
-        process$command <- gsub(pattern,'\\7',line)
-        if (substr(process$command,1,1) == '/') {
-            process$command <- gsub('^.*/([^/]+)$','\\1',process$command)
-        }
-        process$pcpu <- gsub(pattern,'\\2',line)
-        process$time <- gsub(pattern,'\\3',line)
-        process$pmem <- gsub(pattern,'\\4',line)
-        process$state <- gsub(pattern,'\\5',line)
-        process$user <- gsub(pattern,'\\6',line)
-
-        processes <- append(processes,list(process))
-    }
-    return(processes)
+# test usage of echo
+testEcho <- function() {
+    echo()
 }
 
-# use rcurses to paint process data from store
-drawProcesses <- function(window,processes) {
-    if (typeof(window) != 'externalptr' || !is.list(processes)) { return(NULL) }
-    
-    # wipe screen and paint number of processes and column headers
-    rcurses.clear(window)
-    rcurses.addstr(window,paste0('Processes: ',toString(length(processes)),' total'),0,0)
-    rcurses.addstr(window,'PID    COMMAND          %CPU  TIME     %MEM STATE USER',2,0)
-    
-    # only display 'top' few processes sorted by cpu usage
-    rcurses.update_lines_cols()
-    maxProcesses <- min(rcurses.LINES - 3,length(processes))
-    
-    # paint each process as a string on its own line
-    for (i in 1:maxProcesses) {
-        p <- processes[[i]]
-        pid <- paste0(substr(p$pid,1,6),strrep(' ',max(0,6 - nchar(p$pid))))
-        command <- paste0(substr(p$command,1,16),strrep(' ',max(0,16 - nchar(p$command))))
-        pcpu <- paste0(substr(p$pcpu,1,5),strrep(' ',max(0,5 - nchar(p$pcpu))))
-        time <- paste0(substr(p$time,1,8),strrep(' ',max(0,8 - nchar(p$time))))
-        pmem <- paste0(substr(p$pmem,1,4),strrep(' ',max(0,4 - nchar(p$pmem))))
-        state <- paste0(substr(p$state,1,5),strrep(' ',max(0,5 - nchar(p$state))))
-        user <- paste0(substr(p$user,1,16),strrep(' ',max(0,16 - nchar(p$user))))
-        processString <- paste(pid,command,pcpu,time,pmem,state,user,sep=' ')
-        rcurses.addstr(window,processString,i + 2,0)
-    }
-    rcurses.refresh(window)
-    return(NULL)
-}
+
+
 ```
 
 ### ftns
