@@ -9,12 +9,10 @@ top <- function() {
     rcurses.noecho()
 
     # start loop in background for updating top content via ps
-    notDone <<- TRUE
     mcparallel(getAndDrawProcessesLoop(win))
 
     # check for q to stop program
     while (rcurses.getch(win) != 'q') {  }
-    notDone <<- FALSE
 
     # close out rcurses stuff
     rcurses.echo()
@@ -25,7 +23,7 @@ top <- function() {
 
 # fetch and draw top every second
 getAndDrawProcessesLoop <- function(window) {
-    while (notDone) {
+    while (1) {
         lastRefresh <- Sys.time()
         processes <- getProcesses()
         drawProcesses(window,processes)
@@ -37,11 +35,13 @@ getAndDrawProcessesLoop <- function(window) {
 # run ps and put process data into store
 getProcesses <- function() {
     processes <- list()
-    psLines <- system('ps -axrwwo pid,%cpu,time,%mem,state,user,comm',intern=TRUE)[-(1)]
+    psLines <- 
+       system('ps -axrwwo pid,%cpu,time,%mem,state,user,comm',intern=TRUE)[-(1)]
     for (line in psLines) {
 
         # use regular expression to get groups from ps output
-        pattern <- '^[ ]*([^ ]+)[ ]+([^ ]+)[ ]+([^ ]+)[ ]+([^ ]+)+[ ]+([^ ]+)[ ]+([^ ]+)[ ]+(.*)$'
+        pattern <- 
+           '^[ ]*([^ ]+)[ ]+([^ ]+)[ ]+([^ ]+)[ ]+([^ ]+)+[ ]+([^ ]+)[ ]+([^ ]+)[ ]+(.*)$'
 
         # store each group as a substring
         process <- list()
@@ -67,8 +67,10 @@ drawProcesses <- function(window,processes) {
     
     # wipe screen and paint number of processes and column headers
     rcurses.clear(window)
-    rcurses.addstr(window,paste0('Processes: ',toString(length(processes)),' total'),0,0)
-    rcurses.addstr(window,'PID    COMMAND          %CPU  TIME     %MEM STATE USER',2,0)
+    rcurses.addstr(window,
+       paste0('Processes: ',toString(length(processes)),' total'),0,0)
+    rcurses.addstr(window,
+       'PID    COMMAND          %CPU  TIME     %MEM STATE USER',2,0)
     
     # only display 'top' few processes sorted by cpu usage
     rcurses.update_lines_cols()
@@ -78,7 +80,8 @@ drawProcesses <- function(window,processes) {
     for (i in 1:maxProcesses) {
         p <- processes[[i]]
         pid <- paste0(substr(p$pid,1,6),strrep(' ',max(0,6 - nchar(p$pid))))
-        command <- paste0(substr(p$command,1,16),strrep(' ',max(0,16 - nchar(p$command))))
+        command <- paste0(substr(p$command,1,16),
+           strrep(' ',max(0,16 - nchar(p$command))))
         pcpu <- paste0(substr(p$pcpu,1,5),strrep(' ',max(0,5 - nchar(p$pcpu))))
         time <- paste0(substr(p$time,1,8),strrep(' ',max(0,8 - nchar(p$time))))
         pmem <- paste0(substr(p$pmem,1,4),strrep(' ',max(0,4 - nchar(p$pmem))))
