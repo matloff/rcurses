@@ -29,8 +29,9 @@ At least ncurses v6.0.
 
 Within R shell:
 
-```
-install.packages('rcurses')
+```R
+library(devtools)
+devtools::install_github('matloff/rcurses')
 ```
 
 ## Examples
@@ -40,10 +41,13 @@ package.
 
 ### echo
 
-An extremely simple game.  The player keeps hitting keys, which are
-echoed, while the cursor moves downward.  Upon hitting the bottom row,
-cursor moves to top of next column.  Upon hitting bottom of last column,
-cursor moves to top of first column.  Hit 'q' to quit.
+An extremely simple game, just for the purpose of learning **rcurses**.
+The player keeps hitting keys, which are echoed, while the cursor moves
+downward.  Upon hitting the bottom row, cursor moves to top of next
+column.  Upon hitting bottom of last column, cursor moves to top of
+first column.  Hit 'q' to quit.
+
+The comments make the code self-explanatory.
 
 ```R
 library(rcurses)
@@ -51,14 +55,13 @@ library(rcurses)
 echo <- function() {
     # setup rcurses stuff
     win <- rcurses.initscr()  # initialize curses window
-    rcurses.cbreak()  # typed characters submitted immediately, no wait for Enter
+    rcurses.cbreak()  # typed characters submitted right away, no wait for Enter
     rcurses.noecho()  # typed characters are not shown on the screen
 
-    # start screen off blank
-    rcurses.clear(win)  # set the screen to all blanks
-    rcurses.refresh(win)  # render the changes
+    rcurses.clear(win)  # arrange setting the screen to all blanks
+    rcurses.refresh(win)  # render the changes (i.e. update the screen)
 
-    # initialize cursor position
+    # initialize cursor position to row 0 (top), column 0 (leftmost col)
     y <- 0
     x <- 0
     rcurses.move(win,y,x)
@@ -74,7 +77,7 @@ echo <- function() {
                 x <- 0
             }
         }
-        rcurses.move(win,y,x)  # move the cursor to the specified row, col in screen
+        rcurses.move(win,y,x)  # move cursor to specified row, col
     }
 
     # now restore normal screen status
