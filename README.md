@@ -142,7 +142,7 @@ enter either ftn number and op, or q:
 We have temporarily left the R console, and the current window shows a
 list of the functions being debugged. The status of all three functions
 is 'a' (actively debugging) because when calling **nobug**, each function
-passed in has debug called on it. We hit 'q' to return to the R console.
+passed in has **debug()** called on it. We hit 'q' to return to the R console.
 
 Later, say we want to temporarily put the function **funcA()** on
 inactive status. We could call **nobug()** with no arguments, and give
@@ -157,6 +157,13 @@ like this:
 ops are 'a', 'i' or 'rm', e.g. 'g rm' to remove ftn g
 enter either ftn number and op, or q: 
 ```
+
+### Further examples
+
+See the **examples** directory within the installed package. The
+**README** file there list the various examples, with a description of
+each. Note that many of them are just "bare bones," and users are
+encouraged to make enhancements.
 
 ## Contributing
 
