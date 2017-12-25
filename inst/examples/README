@@ -2,10 +2,36 @@
 Simple examples with various degrees of sophistication.  Users are
 invited to refine them.
 
+EXAMPLES FOR LEARNING rcurses CALLS:
+
 echo.R:
 
    Extremely simple game.  Player keeps hitting keys, which are echoed,
    while the cursor moves downward.  Upon hitting the bottom row, cursor
    moves to top of next column.  Upon hitting bottom of last column,
    cursor moves to top of first column.  Hit 'q' to quit.
+
+psax.R:
+
+   On Unix-family systems (Macs, Linux) or Windows Cygwin, the shell
+   command 'ps -ax' lists all current processes.  The rcurses code
+   psax() runs the Unix command, and allows the user to navigate through
+   the resulting list, hitting 'u' to go up a line and 'd' to go down.
+   Hitting 'k' will kill the process, with 'q' for quit.
+
+   The rcurses content of interest here is the cursor movement, in a
+   more practical context than that of echo().
+
+EXAMPLES DIRECTLY USEFUL FOR R:
+
+ftns.R:
+
+   This is an aid to debugging R code.  See the README.md file for the
+   rcurses package.
+
+lsv.R:
+
+   This is the bare beginnings of developing an object browser.  One
+   possible enhancement would be to add operation like those of psax()
+   above. 
 
