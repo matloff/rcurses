@@ -1,5 +1,6 @@
 library(rcurses)
 library(parallel)
+library(tools)
 
 # imitates subset of unix 'top' command 
 top <- function() {
@@ -9,10 +10,11 @@ top <- function() {
     rcurses.noecho()
 
     # start loop in background for updating top content via ps
-    mcparallel(getAndDrawProcessesLoop(win))
+    loopProcess <- mcparallel(getAndDrawProcessesLoop(win))
 
     # check for q to stop program
     while (rcurses.getch(win) != 'q') {  }
+    pskill(loopProcess$pid)
 
     # close out rcurses stuff
     rcurses.echo()
@@ -35,8 +37,12 @@ getAndDrawProcessesLoop <- function(window) {
 # run ps and put process data into store
 getProcesses <- function() {
     processes <- list()
-    psLines <- 
-       system('ps -axrwwo pid,%cpu,time,%mem,state,user,comm',intern=TRUE)[-(1)]
+    macOSPsCall <- 'ps -axrwwo pid,%cpu,time,%mem,state,user,comm'
+    linuxPsCall <- 'ps -axwwo pid,%cpu,time,%mem,state,user,comm --sort -%cpu'
+    psCall <- ''
+    if (Sys.info()[['sysname']] == 'Darwin') { psCall <- macOSPsCall }
+    else if (Sys.info()[['sysname']] == 'Linux') { psCall <- linuxPsCall }
+    psLines <- system(psCall,intern=TRUE)[-(1)]
     for (line in psLines) {
 
         # use regular expression to get groups from ps output
