@@ -1,5 +1,6 @@
 library(rcurses)
 library(parallel)
+library(tools)
 
 # lists and updates all R processes
 
@@ -9,10 +10,11 @@ rprocs <- function(rexec='/usr/lib/R/bin/exec/R') {
     rcurses.cbreak()
     rcurses.noecho()
 
-    getAndDrawProcessesLoop(win,rexec)
+    loopProcess <- mcparallel(getAndDrawProcessesLoop(win,rexec))
 
     # check for q to stop program
     while (rcurses.getch(win) != 'q') {  }
+    pskill(loopProcess$pid)
 
     # close out rcurses stuff
     rcurses.echo()
