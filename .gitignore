@@ -1,3 +1,6 @@
 *.o
 *.so
 *.tar.gz
+*.rds
+..Rcheck/
+*.sh

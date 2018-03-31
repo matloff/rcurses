@@ -288,15 +288,7 @@ rcurses.init_pair <- function(pair_number,fg,bg) {
 #' @export
 #' @useDynLib rcurses, .registration = TRUE
 rcurses.initscr <- function() {
-    result <- .Call('rc_initscr')
-    unlockBinding('rcurses.LINES',asNamespace('rcurses'))
-    unlockBinding('rcurses.COLS',asNamespace('rcurses'))
-    env <- .GlobalEnv
-    assign('rcurses.LINES',.Call('rc_LINES'),envir=env)
-    assign('rcurses.COLS',.Call('rc_COLS'),envir=env)
-    lockBinding('rcurses.LINES',asNamespace('rcurses'))
-    lockBinding('rcurses.COLS',asNamespace('rcurses'))
-    return(result)
+    return(.Call('rc_initscr'))
 }
 
 #' Interface to rcurses.is_term_resized
@@ -3378,7 +3370,9 @@ rcurses.COLOR_YELLOW <- .Call('rc_COLOR_YELLOW')
 #' @return value from corresponding ncurses C constant
 #' @export
 #' @useDynLib rcurses, .registration = TRUE
-rcurses.LINES <- .Call('rc_LINES')
+rcurses.LINES <- function() {
+    .Call('rc_LINES')
+}
 
 #' Interface to rcurses.COLS
 #'
