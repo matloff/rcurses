@@ -79,8 +79,7 @@ drawProcesses <- function(window,processes) {
        'PID    COMMAND          %CPU  TIME     %MEM STATE USER',2,0)
     
     # only display 'top' few processes sorted by cpu usage
-    rcurses.update_lines_cols()
-    maxProcesses <- min(rcurses.LINES - 3,length(processes))
+    maxProcesses <- min(rcurses.LINES() - 3,length(processes))
     
     # paint each process as a string on its own line
     for (i in 1:maxProcesses) {

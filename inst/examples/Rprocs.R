@@ -44,7 +44,6 @@ getProcesses <- function(rexec) {
 drawProcesses <- function(window,processes) {
     # wipe screen and paint number of processes and column headers
     rcurses.clear(window)
-    rcurses.update_lines_cols()
     # paint each process as a string on its own line
     for (i in 1:length(processes)) {
         rcurses.addstr(window,processes[i],i-1,0)
@@ -53,8 +52,8 @@ drawProcesses <- function(window,processes) {
     return(NULL)
 }
 
-# test usage of top
-testTop <- function() {
-    top()
+# test usage of rprocs
+testRprocs <- function() {
+    rprocs()
     return(NULL)
 }

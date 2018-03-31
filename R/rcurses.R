@@ -709,22 +709,6 @@ rcurses.ungetmouse <- function() {
     return(.Call('rc_ungetmouse'))
 }
 
-#' Interface to rcurses.update_lines_cols
-#'
-#' @return value from corresponding ncurses C function
-#' @export
-#' @useDynLib rcurses, .registration = TRUE
-rcurses.update_lines_cols <- function() {
-    unlockBinding('rcurses.LINES',asNamespace('rcurses'))
-    unlockBinding('rcurses.COLS',asNamespace('rcurses'))
-    env <- .GlobalEnv
-    assign('rcurses.LINES',.Call('rc_LINES'),envir=env)
-    assign('rcurses.COLS',.Call('rc_COLS'),envir=env)
-    lockBinding('rcurses.LINES',asNamespace('rcurses'))
-    lockBinding('rcurses.COLS',asNamespace('rcurses'))
-    return(NULL)
-}
-
 #' Interface to rcurses.use_default_colors
 #'
 #' @return value from corresponding ncurses C function
