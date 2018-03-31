@@ -4,8 +4,8 @@ pids <<- list()
 
 psax <- function() {
     win <- start()
-    nrows <<- rcurses.LINES  # number of rows in the screen
-    ncols <<- rcurses.COLS  # number of column in the screen
+    nrows <<- rcurses.LINES()  # number of rows in the screen
+    ncols <<- rcurses.COLS()  # number of column in the screen
     rcurses.clear(win)  # set the screen to all blanks
     # r, c will be current screen row, column of cursor
     psaxcore(win)
@@ -122,8 +122,8 @@ delline <- function(window) {
 }
 
 rerun <- function(window) {
-    nrows <<- rcurses.LINES  # number of rows in the screen
-    ncols <<- rcurses.COLS  # number of column in the screen
+    nrows <<- rcurses.LINES()  # number of rows in the screen
+    ncols <<- rcurses.COLS()  # number of column in the screen
     rcurses.clear(window)  # set the screen to all blanks
     psaxcore(window)
     d <<- 0

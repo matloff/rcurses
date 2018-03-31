@@ -65,7 +65,7 @@ displayObjects <- function(window) {
     rcurses.addstr(window,labelsRow,currRowIndex,0,)
     currRowIndex <- currRowIndex + 2
     # Display the variable rows.
-    for (index in 1:min((rcurses.LINES-3),length(namesToPrint))) {
+    for (index in 1:min((rcurses.LINES()-3),length(namesToPrint))) {
         # For this object, display name and class,
         # padding with correct amount of trailing spaces so the table looks nice.
         rcurses.addstr(
@@ -74,7 +74,7 @@ displayObjects <- function(window) {
         rcurses.addstr(window,classesToPrint[index])
 
         currRowIndex <- currRowIndex + 1
-        if (currRowIndex == rcurses.LINES-1) {
+        if (currRowIndex == rcurses.LINES()-1) {
            rcurses.addstr(window,"etc.",currRowIndex,0,)
            break
         }

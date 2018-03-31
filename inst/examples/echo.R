@@ -27,10 +27,10 @@ echo <- function() {
     while ((ch <- rcurses.getch(win)) != 'q') {
         paintCharacter(win,ch)  # draw the character
         y <- y + 1  # down one column
-        if (y == rcurses.LINES) {  # if past bottom, go to top
+        if (y == rcurses.LINES()) {  # if past bottom, go to top
             y <- 0
             x <- x + 1
-            if (x == rcurses.COLS) {  # if past right edge, go to left
+            if (x == rcurses.COLS()) {  # if past right edge, go to left
                 x <- 0
             }
         }

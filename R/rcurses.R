@@ -3363,4 +3363,6 @@ rcurses.LINES <- function() {
 #' @return value from corresponding ncurses C constant
 #' @export
 #' @useDynLib rcurses, .registration = TRUE
-rcurses.COLS <- .Call('rc_COLS')
+rcurses.COLS <- function() {
+    .Call('rc_COLS')
+}
