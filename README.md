@@ -39,7 +39,7 @@ devtools::install_github('matloff/rcurses')
 These examples are available in the **examples** directory of the
 package.
 
-### echo
+### echo.R
 
 An extremely simple game, just for the purpose of learning **rcurses**.
 The player keeps hitting keys, which are echoed, while the cursor moves
@@ -70,7 +70,7 @@ echo <- function() {
     while ((ch <- rcurses.getch(win)) != 'q') {
         paintCharacter(win,ch)  # draw the character
         y <- y + 1  # down one column
-        if (y == rcurses.LINES) {  # if past bottom, go to top
+        if (y == rcurses.LINES) {  # if past bottom, go to top and right
             y <- 0
             x <- x + 1
             if (x == rcurses.COLS) {  # if past right edge, go to left
@@ -102,7 +102,7 @@ testEcho <- function() {
 
 ```
 
-### ftns
+### ftns.R
 
 Next, something still extremely simple but actually useful. If one does
 one's debugging using the basic built-in R functions, e.g. **debug()**
@@ -110,13 +110,13 @@ and **browser()**, it may be difficult to remember which functions one
 currently has in debug status. So it would be nice to have a tool to
 keep track of them. In addition, it would be useful to temporarily
 remove a function from debug status and then easily reinstate it. The
-functions below are aimed in that direction. We call the package
-**nobug**.
+functions below are aimed in that direction. We will refer to the group 
+of functions as **nobug**, with the main function **nobug()** being a
+wrapper for **debug**.
 
 Consider for instance the **partools** package, which consists of over
 60 user-accessible functions. Say we are debugging a **partools** app
-(or **partools** itself).
-We would first initialize,
+(or **partools** itself).  We would first initialize **nobug**:
 
 ```R
 > nbinit()
