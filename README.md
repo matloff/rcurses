@@ -3,20 +3,20 @@ Access the
 [curses](https://en.wikipedia.org/wiki/Curses_(programming_library))
 library from R.
 
-Little known to even many programmers, the **curses** library in
+Little known to even many programmers, the `curses` library in
 Unix-family systems (Linux, Mac, etc.) forms the basis for a number of
-popular text-based applications, such as the **vim** and **emacs** text
+popular text-based applications, such as the `vim` and `emacs` text
 editors.
 
-For instance, in **vim**, hitting the 'j' key causes the screen cursor to
-move down one line. The proper call to the **curses** library makes this
+For instance, in `vim`, hitting the 'j' key causes the screen cursor to
+move down one line. The proper call to the `curses` library makes this
 happen.
 
 The [ncurses](https://en.wikipedia.org/wiki/Ncurses) implementation of
 the curses API is written in C, but interfaces from other languages have
 been developed, Python being a prominent example.  We have now developed
-our package, **rcurses**, to do the same for R. (Not all of the
-**curses** library is implemented yet; let us know if you have
+our package, `rcurses`, to do the same for R. (Not all of the
+`curses` library is implemented yet; let us know if you have
 requests.)
 
 ## Prerequisites
@@ -36,12 +36,12 @@ devtools::install_github('matloff/rcurses')
 
 ## Examples
 
-These examples are available in the **examples** directory of the
+These examples are available in the `examples` directory of the
 package.
 
 ### echo.R
 
-An extremely simple game, just for the purpose of learning **rcurses**.
+An extremely simple game, just for the purpose of learning `rcurses`.
 The player keeps hitting keys, which are echoed, while the cursor moves
 downward.  Upon hitting the bottom row, cursor moves to top of next
 column.  Upon hitting bottom of last column, cursor moves to top of
@@ -52,16 +52,18 @@ The comments make the code self-explanatory.
 ```R
 library(rcurses)
 
+# prints to terminal what you type by top-to-bottom then left-to-right
 echo <- function() {
     # setup rcurses stuff
     win <- rcurses.initscr()  # initialize curses window
-    rcurses.cbreak()  # typed characters submitted right away, no wait for Enter
+    rcurses.cbreak()  # typed characters submitted immediately, no wait for Enter
     rcurses.noecho()  # typed characters are not shown on the screen
 
-    rcurses.clear(win)  # arrange setting the screen to all blanks
-    rcurses.refresh(win)  # render the changes (i.e. update the screen)
+    # start screen off blank
+    rcurses.clear(win)  # set the screen to all blanks
+    rcurses.refresh(win)  # render the changes
 
-    # initialize cursor position to row 0 (top), column 0 (leftmost col)
+    # initialize cursor position
     y <- 0
     x <- 0
     rcurses.move(win,y,x)
@@ -70,14 +72,14 @@ echo <- function() {
     while ((ch <- rcurses.getch(win)) != 'q') {
         paintCharacter(win,ch)  # draw the character
         y <- y + 1  # down one column
-        if (y == rcurses.LINES) {  # if past bottom, go to top and right
+        if (y == rcurses.LINES()) {  # if past bottom, go to top
             y <- 0
             x <- x + 1
-            if (x == rcurses.COLS) {  # if past right edge, go to left
+            if (x == rcurses.COLS()) {  # if past right edge, go to left
                 x <- 0
             }
         }
-        rcurses.move(win,y,x)  # move cursor to specified row, col
+        rcurses.move(win,y,x)  # move the cursor to the specified row, col in screen
     }
 
     # now restore normal screen status
@@ -99,30 +101,29 @@ testEcho <- function() {
 }
 
 
-
 ```
 
 ### ftns.R
 
 Next, something still extremely simple but actually useful. If one does
-one's debugging using the basic built-in R functions, e.g. **debug()**
-and **browser()**, it may be difficult to remember which functions one
+one's debugging using the basic built-in R functions, e.g. `debug()`
+and `browser()`, it may be difficult to remember which functions one
 currently has in debug status. So it would be nice to have a tool to
 keep track of them. In addition, it would be useful to temporarily
 remove a function from debug status and then easily reinstate it. The
 functions below are aimed in that direction. We will refer to the group 
-of functions as **nobug**, with the main function **nobug()** being a
-wrapper for **debug**.
+of functions as `nobug`, with the main function `nobug()` being a
+wrapper for `debug`.
 
-Consider for instance the **partools** package, which consists of over
-60 user-accessible functions. Say we are debugging a **partools** app
-(or **partools** itself).  We would first initialize **nobug**:
+Consider for instance the `partools` package, which consists of over
+60 user-accessible functions. Say we are debugging a `partools` app
+(or `partools` itself).  We would first initialize `nobug`:
 
 ```R
 > nbinit()
 ```
 
-Now do the equivalent of calling **debug()** on several functions:
+Now do the equivalent of calling `debug()` on several functions:
 
 ```R
 > nobug(c('funcA','funcB','funcC'))
@@ -141,12 +142,12 @@ enter either ftn number and op, or q:
 
 We have temporarily left the R console, and the current window shows a
 list of the functions being debugged. The status of all three functions
-is 'a' (actively debugging) because when calling **nobug**, each function
-passed in has **debug()** called on it. We hit 'q' to return to the R console.
+is 'a' (actively debugging) because when calling `nobug`, each function
+passed in has `debug()` called on it. We hit 'q' to return to the R console.
 
-Later, say we want to temporarily put the function **funcA()** on
-inactive status. We could call **nobug()** with no arguments, and give
-a command to set the function to inactive. The screen would now look
+Later, say we want to temporarily put the function `funcA()` on
+inactive status. We could call `nobug()` with no arguments, and give
+an 'i' command to set the function to inactive. The screen would now look
 like this:
 
 ```
@@ -160,8 +161,8 @@ enter either ftn number and op, or q:
 
 ### Further examples
 
-See the **examples** directory within the installed package. The
-**README** file there list the various examples, with a description of
+See the `examples` directory within the installed package. The
+`README` file there list the various examples, with a description of
 each. Note that many of them are just "bare bones," and users are
 encouraged to make enhancements.
 
