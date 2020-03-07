@@ -11,6 +11,7 @@ License: MIT + file LICENSE
 LazyLoad: yes
 Packaged: 2017-12-19 00:00:00 UTC-8; kotila
 ByteCompile: yes
+StagedInstall: no
 NeedsCompilation: yes
 Repository: CRAN
 Date/Publication: 2017-12-19 00:00:00
