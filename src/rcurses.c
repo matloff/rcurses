@@ -4,165 +4,165 @@
 #include <Rinternals.h>
 #include <R_ext/Rdynload.h>
 
-SEXP rc__nc_free_and_exit() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc__nc_freeall() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc__nc_tracebits() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc__traceattr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc__traceattr2() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc__tracechar() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc__tracechtype() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc__tracechtype2() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc__tracedump() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc__tracef() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc__tracemouse() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_add_wch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_add_wchnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_add_wchstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_addch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_addchnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_addchstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_addnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_addnwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_addstr(SEXP str) {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_addwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_alloc_pair() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_assume_default_colors() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_attr_get() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_attr_off() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_attr_on() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_attr_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_attroff() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_attron() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_attrset() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_baudrate() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_beep() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc__nc_free_and_exit() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc__nc_freeall() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc__nc_tracebits() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc__traceattr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc__traceattr2() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc__tracechar() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc__tracechtype() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc__tracechtype2() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc__tracedump() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc__tracef() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc__tracemouse() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_add_wch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_add_wchnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_add_wchstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_addch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_addchnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_addchstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_addnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_addnwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_addstr(SEXP str) {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_addwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_alloc_pair() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_assume_default_colors() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_attr_get() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_attr_off() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_attr_on() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_attr_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_attroff() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_attron() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_attrset() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_baudrate() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_beep() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_bkgd(SEXP ch) {
     SEXP result;
@@ -172,45 +172,45 @@ SEXP rc_bkgd(SEXP ch) {
     return result;
 }
 
-SEXP rc_bkgdset() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_bkgrnd() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_bkgrndset() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_border() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_border_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_box() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_box_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_can_change_color() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_bkgdset() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_bkgrnd() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_bkgrndset() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_border() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_border_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_box() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_box_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_can_change_color() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_cbreak() {
     SEXP result;
@@ -220,35 +220,35 @@ SEXP rc_cbreak() {
     return result;
 }
 
-SEXP rc_chgat() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_clear() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_clearok() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_clrtobot() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_clrtoeol() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_color_content() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_chgat() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_clear() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_clearok() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_clrtobot() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_clrtoeol() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_color_content() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_COLOR_PAIR(SEXP n) {
     SEXP result;
@@ -258,85 +258,85 @@ SEXP rc_COLOR_PAIR(SEXP n) {
     return result;
 }
 
-SEXP rc_color_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_copywin() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_curs_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_curses_version() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_def_prog_mode() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_def_shell_mode() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_define_key() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_del_curterm() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_delay_output() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_delch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_deleteln() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_delscreen() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_delwin() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_derwin() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_doupdate() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_dupwin() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_color_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_copywin() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_curs_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_curses_version() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_def_prog_mode() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_def_shell_mode() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_define_key() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_del_curterm() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_delay_output() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_delch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_deleteln() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_delscreen() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_delwin() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_derwin() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_doupdate() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_dupwin() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_echo() {
     SEXP result;
@@ -346,15 +346,15 @@ SEXP rc_echo() {
     return result;
 }
 
-SEXP rc_echo_wchar() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_echochar() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_echo_wchar() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_echochar() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_endwin() {
     SEXP result;
@@ -364,130 +364,130 @@ SEXP rc_endwin() {
     return result;
 }
 
-SEXP rc_erase() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_erasechar() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_erasewchar() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_extended_color_content() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_extended_pair_content() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_extended_slk_color() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_filter() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_find_pair() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_flash() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_flushinp() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_free_pair() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_get_wch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_get_wstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getattrs() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getbegx() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getbegy() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getbegyx() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getbkgd() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getbkgrnd() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getcchar() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getcurx() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getcury() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getmaxx() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getmaxy() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_erase() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_erasechar() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_erasewchar() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_extended_color_content() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_extended_pair_content() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_extended_slk_color() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_filter() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_find_pair() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_flash() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_flushinp() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_free_pair() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_get_wch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_get_wstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getattrs() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getbegx() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getbegy() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getbegyx() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getbkgd() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getbkgrnd() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getcchar() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getcurx() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getcury() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getmaxx() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getmaxy() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_getmaxyx(SEXP win, SEXP y, SEXP x) {
     SEXP result;
@@ -497,50 +497,50 @@ SEXP rc_getmaxyx(SEXP win, SEXP y, SEXP x) {
     return result;
 }
 
-SEXP rc_getmouse() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getn_wstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getparx() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getpary() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getparyx() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getsyx() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_getwin() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_getmouse() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getn_wstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getparx() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getpary() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getparyx() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getsyx() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_getwin() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_getyx(SEXP win, SEXP y, SEXP x) {
     SEXP result;
@@ -550,100 +550,100 @@ SEXP rc_getyx(SEXP win, SEXP y, SEXP x) {
     return result;
 }
 
-SEXP rc_halfdelay() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_has_colors() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_has_ic() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_has_il() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_has_key() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_hline() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_hline_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_idcok() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_idlok() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_immedok() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_in_wch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_in_wchnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_in_wchstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_inch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_inchnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_inchstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_init_color() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_init_extended_color() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_init_extended_pair() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_halfdelay() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_has_colors() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_has_ic() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_has_il() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_has_key() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_hline() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_hline_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_idcok() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_idlok() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_immedok() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_in_wch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_in_wchnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_in_wchstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_inch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_inchnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_inchstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_init_color() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_init_extended_color() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_init_extended_pair() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_init_pair(SEXP pair, SEXP f, SEXP b) {
     SEXP result;
@@ -657,455 +657,455 @@ SEXP rc_initscr() {
     return R_MakeExternalPtr(initscr(), R_NilValue, R_NilValue);
 }
 
-SEXP rc_innstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_innwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_ins_nwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_ins_wch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_ins_wstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_insch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_insdelln() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_insertln() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_insnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_insstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_instr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_intrflush() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_inwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_is_cleared() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_is_idcok() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_is_idlok() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_is_immedok() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_is_keypad() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_is_leaveok() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_is_linetouched() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_is_nodelay() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_is_notimeout() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_is_pad() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_is_scrollok() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_is_subwin() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_is_syncok() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_is_term_resized() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_is_wintouched() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_isendwin() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_key_defined() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_key_name() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_keybound() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_keyname() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_keyok() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_keypad() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_killchar() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_killwchar() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_leaveok() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_longname() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mcprint() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_meta() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mouse_trafo() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mouseinterval() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mousemask() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_move() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvadd_wch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvadd_wchnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvadd_wchstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvaddch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvaddchnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvaddchstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvaddnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvaddnwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvaddstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvaddwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvchgat() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvcur() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvdelch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvderwin() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvget_wch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvget_wstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvgetch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvgetn_wstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvgetnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvgetstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvhline() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvhline_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvin_wch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvin_wchnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvin_wchstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvinch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvinchnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvinchstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvinnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvinnwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvins_nwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvins_wch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvins_wstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvinsch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvinsnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvinsstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvinstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvinwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvprintw() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvscanw() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvvline() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvvline_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwadd_wch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwadd_wchnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwadd_wchstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_innstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_innwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_ins_nwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_ins_wch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_ins_wstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_insch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_insdelln() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_insertln() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_insnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_insstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_instr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_intrflush() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_inwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_is_cleared() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_is_idcok() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_is_idlok() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_is_immedok() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_is_keypad() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_is_leaveok() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_is_linetouched() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_is_nodelay() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_is_notimeout() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_is_pad() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_is_scrollok() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_is_subwin() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_is_syncok() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_is_term_resized() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_is_wintouched() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_isendwin() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_key_defined() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_key_name() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_keybound() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_keyname() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_keyok() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_keypad() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_killchar() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_killwchar() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_leaveok() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_longname() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mcprint() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_meta() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mouse_trafo() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mouseinterval() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mousemask() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_move() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvadd_wch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvadd_wchnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvadd_wchstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvaddch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvaddchnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvaddchstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvaddnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvaddnwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvaddstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvaddwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvchgat() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvcur() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvdelch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvderwin() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvget_wch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvget_wstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvgetch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvgetn_wstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvgetnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvgetstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvhline() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvhline_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvin_wch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvin_wchnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvin_wchstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvinch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvinchnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvinchstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvinnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvinnwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvins_nwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvins_wch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvins_wstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvinsch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvinsnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvinsstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvinstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvinwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvprintw() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvscanw() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvvline() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvvline_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwadd_wch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwadd_wchnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwadd_wchstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_mvwaddch(SEXP win, SEXP y, SEXP x, SEXP ch) {
     SEXP result;
@@ -1115,10 +1115,10 @@ SEXP rc_mvwaddch(SEXP win, SEXP y, SEXP x, SEXP ch) {
     return result;
 }
 
-SEXP rc_mvwaddchnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_mvwaddchnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_mvwaddchstr(SEXP win, SEXP y, SEXP x, SEXP str) {
     SEXP result;
@@ -1136,10 +1136,10 @@ SEXP rc_mvwaddnstr(SEXP win, SEXP y, SEXP x, SEXP str, SEXP n) {
     return result;
 }
 
-SEXP rc_mvwaddnwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_mvwaddnwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_mvwaddstr(SEXP win, SEXP y, SEXP x, SEXP str) {
     SEXP result;
@@ -1149,15 +1149,15 @@ SEXP rc_mvwaddstr(SEXP win, SEXP y, SEXP x, SEXP str) {
     return result;
 }
 
-SEXP rc_mvwaddwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwchgat() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_mvwaddwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwchgat() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_mvwdelch(SEXP win, SEXP y, SEXP x) {
     SEXP result;
@@ -1167,15 +1167,15 @@ SEXP rc_mvwdelch(SEXP win, SEXP y, SEXP x) {
     return result;
 }
 
-SEXP rc_mvwget_wch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwget_wstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_mvwget_wch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwget_wstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_mvwgetch(SEXP win, SEXP y, SEXP x) {
     SEXP result;
@@ -1185,10 +1185,10 @@ SEXP rc_mvwgetch(SEXP win, SEXP y, SEXP x) {
     return result;
 }
 
-SEXP rc_mvwgetn_wstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_mvwgetn_wstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_mvwgetnstr(SEXP win, SEXP y, SEXP x, SEXP str, SEXP n) {
     SEXP result;
@@ -1206,75 +1206,75 @@ SEXP rc_mvwgetstr(SEXP win, SEXP y, SEXP x, SEXP str) {
     return result;
 }
 
-SEXP rc_mvwhline() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwhline_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwin() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwin_wch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwin_wchnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwin_wchstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwinch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwinchnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwinchstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwinnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwinnwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwins_nwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwins_wch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwins_wstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_mvwhline() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwhline_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwin() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwin_wch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwin_wchnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwin_wchstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwinch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwinchnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwinchstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwinnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwinnwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwins_nwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwins_wch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwins_wstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_mvwinsch(SEXP win, SEXP y, SEXP x, SEXP ch) {
     SEXP result;
@@ -1284,70 +1284,70 @@ SEXP rc_mvwinsch(SEXP win, SEXP y, SEXP x, SEXP ch) {
     return result;
 }
 
-SEXP rc_mvwinsnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwinsstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwinstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwinwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwprintw() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwscanw() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwvline() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_mvwvline_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_napms() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_newpad() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_newterm() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_newwin() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_nl() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_mvwinsnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwinsstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwinstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwinwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwprintw() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwscanw() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwvline() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_mvwvline_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_napms() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_newpad() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_newterm() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_newwin() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_nl() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_nocbreak() {
     SEXP result;
@@ -1357,10 +1357,10 @@ SEXP rc_nocbreak() {
     return result;
 }
 
-SEXP rc_nodelay() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_nodelay() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_noecho() {
     SEXP result;
@@ -1370,60 +1370,60 @@ SEXP rc_noecho() {
     return result;
 }
 
-SEXP rc_nofilter() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_nonl() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_noqiflush() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_noraw() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_notimeout() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_overlay() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_overwrite() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_pair_content() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_PAIR_NUMBER() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_pechochar() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_pnoutrefresh() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_nofilter() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_nonl() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_noqiflush() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_noraw() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_notimeout() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_overlay() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_overwrite() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_pair_content() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_PAIR_NUMBER() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_pechochar() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_pnoutrefresh() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_prefresh(SEXP pad, SEXP pminrow, SEXP pmincol, SEXP sminrow, SEXP smincol, SEXP smaxrow, SEXP smaxcol) {
     SEXP result;
@@ -1433,245 +1433,245 @@ SEXP rc_prefresh(SEXP pad, SEXP pminrow, SEXP pmincol, SEXP sminrow, SEXP sminco
     return result;
 }
 
-SEXP rc_printw() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_putp() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_putwin() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_qiflush() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_raw() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_redrawwin() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_refresh() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_reset_prog_mode() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_reset_shell_mode() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_resetty() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_resize_term() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_resizeterm() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_restartterm() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_ripoffline() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_savetty() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_scanw() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_scr_dump() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_scr_init() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_scr_restore() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_scr_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_scrl() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_scroll() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_scrollok() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_set_curterm() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_set_term() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_setcchar() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_setscrreg() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_setsyx() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_setterm() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_setupterm() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_slk_attr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_slk_attr_off() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_slk_attr_on() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_slk_attr_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_slk_attroff() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_slk_attron() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_slk_attrset() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_slk_clear() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_slk_color() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_slk_init() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_slk_label() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_slk_noutrefresh() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_slk_refresh() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_slk_restore() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_slk_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_slk_touch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_standend() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_standout() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_printw() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_putp() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_putwin() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_qiflush() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_raw() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_redrawwin() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_refresh() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_reset_prog_mode() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_reset_shell_mode() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_resetty() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_resize_term() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_resizeterm() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_restartterm() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_ripoffline() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_savetty() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_scanw() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_scr_dump() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_scr_init() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_scr_restore() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_scr_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_scrl() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_scroll() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_scrollok() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_set_curterm() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_set_term() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_setcchar() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_setscrreg() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_setsyx() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_setterm() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_setupterm() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_slk_attr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_slk_attr_off() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_slk_attr_on() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_slk_attr_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_slk_attroff() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_slk_attron() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_slk_attrset() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_slk_clear() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_slk_color() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_slk_init() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_slk_label() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_slk_noutrefresh() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_slk_refresh() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_slk_restore() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_slk_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_slk_touch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_standend() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_standout() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_start_color() {
     SEXP result;
@@ -1681,230 +1681,230 @@ SEXP rc_start_color() {
     return result;
 }
 
-SEXP rc_subpad() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_subwin() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_syncok() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_term_attrs() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_termattrs() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_termname() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_tgetent() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_tgetflag() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_tgetnum() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_tgetstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_tgoto() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_tigetflag() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_tigetnum() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_tigetstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_timeout() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_tiparm() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_touchline() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_touchwin() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_tparm() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_tputs() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_trace() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_typeahead() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_unctrl() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_unget_wch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_ungetch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_ungetmouse() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_untouchwin() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_use_default_colors() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_use_env() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_use_extended_names() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_use_legacy_coding() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_use_tioctl() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_vid_attr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_vid_puts() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_vidattr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_vidputs() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_vline() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_vline_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_vw_printw() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_vw_scanw() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_vwprintw() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_vwscanw() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wadd_wch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wadd_wchnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wadd_wchstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_subpad() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_subwin() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_syncok() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_term_attrs() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_termattrs() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_termname() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_tgetent() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_tgetflag() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_tgetnum() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_tgetstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_tgoto() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_tigetflag() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_tigetnum() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_tigetstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_timeout() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_tiparm() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_touchline() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_touchwin() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_tparm() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_tputs() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_trace() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_typeahead() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_unctrl() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_unget_wch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_ungetch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_ungetmouse() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_untouchwin() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_use_default_colors() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_use_env() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_use_extended_names() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_use_legacy_coding() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_use_tioctl() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_vid_attr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_vid_puts() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_vidattr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_vidputs() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_vline() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_vline_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_vw_printw() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_vw_scanw() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_vwprintw() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_vwscanw() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wadd_wch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wadd_wchnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wadd_wchstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_waddch(SEXP win, SEXP ch) {
     SEXP result;
@@ -1935,10 +1935,10 @@ SEXP rc_waddnstr(SEXP win, SEXP str, SEXP n) {
     return result;
 }
 
-SEXP rc_waddnwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_waddnwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_waddstr(SEXP win, SEXP str) {
     SEXP result;
@@ -1948,45 +1948,45 @@ SEXP rc_waddstr(SEXP win, SEXP str) {
     return result;
 }
 
-SEXP rc_waddwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wattr_get() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wattr_off() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wattr_on() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wattr_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wattroff() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wattron() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wattrset() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_waddwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wattr_get() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wattr_off() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wattr_on() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wattr_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wattroff() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wattron() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wattrset() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_wbkgd(SEXP win, SEXP ch) {
     SEXP result;
@@ -1996,35 +1996,35 @@ SEXP rc_wbkgd(SEXP win, SEXP ch) {
     return result;
 }
 
-SEXP rc_wbkgdset() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wbkgrnd() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wbkgrndset() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wborder() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wborder_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wchgat() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_wbkgdset() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wbkgrnd() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wbkgrndset() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wborder() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wborder_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wchgat() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_wclear(SEXP win) {
     SEXP result;
@@ -2034,25 +2034,25 @@ SEXP rc_wclear(SEXP win) {
     return result;
 }
 
-SEXP rc_wclrtobot() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wclrtoeol() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wcolor_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wcursyncup() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_wclrtobot() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wclrtoeol() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wcolor_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wcursyncup() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_wdelch(SEXP win) {
     SEXP result;
@@ -2062,45 +2062,45 @@ SEXP rc_wdelch(SEXP win) {
     return result;
 }
 
-SEXP rc_wdeleteln() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wecho_wchar() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wechochar() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wenclose() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_werase() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wget_wch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wget_wstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wgetbkgrnd() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_wdeleteln() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wecho_wchar() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wechochar() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wenclose() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_werase() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wget_wch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wget_wstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wgetbkgrnd() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_wgetch(SEXP win) {
     SEXP result;
@@ -2110,15 +2110,15 @@ SEXP rc_wgetch(SEXP win) {
     return result;
 }
 
-SEXP rc_wgetdelay() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wgetn_wstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_wgetdelay() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wgetn_wstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_wgetnstr(SEXP win, SEXP str, SEXP n) {
     SEXP result;
@@ -2128,15 +2128,15 @@ SEXP rc_wgetnstr(SEXP win, SEXP str, SEXP n) {
     return result;
 }
 
-SEXP rc_wgetparent() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wgetscrreg() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_wgetparent() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wgetscrreg() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_wgetstr(SEXP win, SEXP str) {
     SEXP result;
@@ -2146,70 +2146,70 @@ SEXP rc_wgetstr(SEXP win, SEXP str) {
     return result;
 }
 
-SEXP rc_whline() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_whline_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_win_wch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_win_wchnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_win_wchstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_winch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_winchnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_winchstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_winnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_winnwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wins_nwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wins_wch() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wins_wstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_whline() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_whline_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_win_wch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_win_wchnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_win_wchstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_winch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_winchnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_winchstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_winnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_winnwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wins_nwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wins_wch() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wins_wstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_winsch(SEXP win, SEXP ch) {
     SEXP result;
@@ -2219,40 +2219,40 @@ SEXP rc_winsch(SEXP win, SEXP ch) {
     return result;
 }
 
-SEXP rc_winsdelln() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_winsertln() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_winsnstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_winsstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_winstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_winwstr() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wmouse_trafo() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_winsdelln() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_winsertln() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_winsnstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_winsstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_winstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_winwstr() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wmouse_trafo() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_wmove(SEXP win, SEXP y, SEXP x) {
     SEXP result;
@@ -2262,20 +2262,20 @@ SEXP rc_wmove(SEXP win, SEXP y, SEXP x) {
     return result;
 }
 
-SEXP rc_wnoutrefresh() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wprintw() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wredrawln() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_wnoutrefresh() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wprintw() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wredrawln() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_wrefresh(SEXP win) {
     SEXP result;
@@ -2285,70 +2285,70 @@ SEXP rc_wrefresh(SEXP win) {
     return result;
 }
 
-SEXP rc_wresize() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wscanw() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wscrl() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wsetscrreg() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wstandend() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wstandout() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wsyncdown() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wsyncup() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wtimeout() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wtouchln() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wunctrl() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wvline() {
-    // TODO: implement this
-    return R_NilValue;
-}
-
-SEXP rc_wvline_set() {
-    // TODO: implement this
-    return R_NilValue;
-}
+# SEXP rc_wresize() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wscanw() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wscrl() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wsetscrreg() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wstandend() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wstandout() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wsyncdown() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wsyncup() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wtimeout() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wtouchln() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wunctrl() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wvline() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
+# 
+# SEXP rc_wvline_set() {
+#     // TODO: implement this
+#     return R_NilValue;
+# }
 
 SEXP rc_ERR() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)ERR; UNPROTECT(1); return result; }
 SEXP rc_OK() { SEXP result; PROTECT(result = NEW_INTEGER(1)); INTEGER(result)[0] = (int)OK; UNPROTECT(1); return result; }
