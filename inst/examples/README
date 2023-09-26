@@ -2,8 +2,6 @@
 Simple examples with various degrees of sophistication.  Users are
 invited to refine them.
 
-EXAMPLES FOR LEARNING rcurses CALLS:
-
 echo.R:
 
    Extremely simple game.  Player keeps hitting keys, which are echoed,
@@ -11,23 +9,74 @@ echo.R:
    moves to top of next column.  Upon hitting bottom of last column,
    cursor moves to top of first column.  Hit 'q' to quit.
 
+   Example:
+
+      from the directory containing this README, run in R
+
+         source('echo.R')
+         
+      keep hitting random characters; each will echo, and the cursor
+      will move down one row; when you get to the bottom, cursor will
+      move to the top, starting a new column
+
+      hit q to quit
+
 psax.R:
 
    On Unix-family systems (Macs, Linux) or Windows Cygwin, the shell
    command 'ps -ax' lists all current processes.  The rcurses code
    psax() runs the Unix command, and allows the user to navigate through
    the resulting list, hitting 'u' to go up a line and 'd' to go down.
-   Hitting 'k' will kill the process, with 'q' for quit.
+   Hitting 'k' will kill the process (be careful!), with 'q' for quit.
 
-   The rcurses content of interest here is the cursor movement, in a
-   more practical context than that of echo().
+   Example:
 
-EXAMPLES DIRECTLY USEFUL FOR R:
+      in another window, run 'ex x' (old Unix text editor) from the shell
+
+      from the directory containing this README, run in R
+
+         source('psax.R')
+         psa()
+
+     should see all your processes--be careful!
+     hit u or d a few times, to see the cursor move, finally settling
+        on the line with the ex process
+     hit k; the line will be erased, and in your window that had been
+        running ex, you'll see ex was killed
+     hit q to quit, before you do any damage to important processes :-)
 
 ftns.R:
 
-   This is an aid to debugging R code.  See the README.md file for the
-   rcurses package.
+   This is an aid to debugging R code.  It keeps track of which
+   functions in an R session are currently in debug mode, i.e. will
+   enter the R browser when run.
+
+   Example:
+
+      from the directory containing this README, run in R
+
+         source('ftns.R')
+         nbinit()  
+         # initialization, defines small functions funcA, funcB, funcC,
+         # each of which adds 1 to arg and returns sum; sets up an R
+         # environment nbenv, consisting of table, nbenv$nblist, showing
+         # which functions are in debug state
+         nbenv$nblist
+         # empty list, no functions in debug state for now
+         funcb(6)  # prints 7, not going through browser
+         # specify functions to be into debug state
+         nobug('funcB')
+         # this did debug(funcB), and added an entry to the table of functions
+         # currently in debug state
+         funcB(6)  # enters browser; hit c to finish executing function
+         nbenv$nblist  # yep, funcB is on the debug list
+         nobug  # ask to edit the list
+         # let's make funcB's debug state inactive; hit '1 i'; new
+         #  updated table is displayed
+         funcB(6)  # returns 7, no browser exec
+         nbenv$nblist  # funcB shown inactive
+         nobug()  # hit '1 rm' to take funcB off the list entirely
+         nbenv$nblist  # yep, table empty
 
 lsv.R:
 
